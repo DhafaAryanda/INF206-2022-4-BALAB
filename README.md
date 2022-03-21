@@ -1,6 +1,10 @@
 # INF206-2022-RI4-BALAB
 
-Repository Project Rekayasa Perangkat Lunak Berbasis Web
+Repository Project Rekayasa Perangkat Lunak Berbasis Web - Baca Hasil Lab Online
+
+# Deskripsi
+
+Project ini disusun dan dikerjakan untuk memenuhi tugas matakuliah Rekayasa Perangkat Lunak.
 
 # Anggota Kelompok:
 1. 2008107010028 - Khairun nisa
