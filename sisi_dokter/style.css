@@ -1,0 +1,29 @@
+.wrap{
+	height: 1000px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.59);
+    background: url(background.png);
+    background-size: cover;
+    position: relative;
+}
+ 
+/*bagian header*/
+.wrap .header{
+	height: 50px;
+}
+ 
+.wrap .header ul li{
+	float: right;
+	list-style-type: none;
+	padding: 30px;
+}
+/*akhir header*/
+ 
+.clear{
+	clear: both;
+}
+ 
+.badan{
+	height: 450px;
+
+ 
+}
