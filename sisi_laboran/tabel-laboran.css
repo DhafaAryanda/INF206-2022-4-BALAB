@@ -1,0 +1,41 @@
+.tabel-laboran {
+    height: 800px;
+    background: url(background.png);
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    width: 0;
+    margin-bottom: 200px;
+    float: left;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 20%;
+    margin-top: 50px;
+}
+
+.table tr th {
+    font-weight: normal;
+}
+
+.table th td {
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.container2 {
+    width: 18%;
+    height: 30px;
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.container2 img-thumbnail {
+    width: 100%;
+    position: relative;
+}
