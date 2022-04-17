@@ -1,4 +1,3 @@
-<<<<<<<
 .login-pasien {
     height: 800px;
     background: url(https://raw.githubusercontent.com/DhafaAryanda/INF206-2022-RI4-BALAB/main/login_dokter/background.png);
@@ -47,45 +46,3 @@
 .button2 {
     text-align: center;
 }
-=======
-.login-pasien {
-    height: 800px;
-    background: url(https://raw.githubusercontent.com/DhafaAryanda/INF206-2022-RI4-BALAB/main/login_dokter/background.png);
-    background-size: cover;
-    position: relative;
-}
-
-.login-pasien form {
-    position: absolute;
-    width: 400px;
-    height: 440px;
-    left: 95px;
-    top: 150px;
-    background: rgba(230, 230, 230, 0.82);
-    border-radius: 15px;
-}
-
-.container {
-    width: 0;
-    margin-bottom: 200px;
-    float: left;
-}
-
-.form {
-    padding: 20px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 103%;
-    height: 50px;
-}
-
-.form-text {
-    font-size: 11px;
-    text-align: center;
-    margin-left: 10px;
-}
->>>>>>>
