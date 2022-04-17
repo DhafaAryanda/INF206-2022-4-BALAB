@@ -1,0 +1,12 @@
+.tabel-laboran {
+    height: 800px;
+    background: url(background.png);
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    width: 0;
+    margin-bottom: 200px;
+    float: left;
+}
