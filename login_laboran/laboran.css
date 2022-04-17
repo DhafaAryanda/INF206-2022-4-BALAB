@@ -1,11 +1,11 @@
-.login-dokter {
+.login-laboran {
     height: 800px;
     background: url(background.png);
     background-size: cover;
     position: relative;
 }
 
-.login-dokter form {
+.login-laboran form {
     position: absolute;
     width: 400px;
     height: 440px;
