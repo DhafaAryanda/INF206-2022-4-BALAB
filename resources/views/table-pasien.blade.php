@@ -45,55 +45,38 @@
                 </div>
             </nav>
         </div>
-        <div class="container rounded-3" style="height: 150px; width: 1200px; background-color:rgb(255, 255, 255);">
-            <div class="row fw-bold">
-                <div class="col">
-                    <img src="{{ URL::asset('assets/images/profil.png')}}" alt="" width="80" class="rounded-circle img-thumbnail ms-5 mt-3">
-                    <br><div class="badge bg-primary text-wrap tex ms-2 fw-bold mt-2 ms-5" style="width: 5rem;">keluar</div>
-                </div>
+        <section class="position-absolute top-50 start-50 translate-middle"><br><br><br><br><br><br><br><br>
+            <div class="container rounded-3" style="height: 150px; width: 800px; background-color:rgb(211, 211, 211);">
+                <div class="row fw-bold">
+                    <div class="col">
+                        <img src="{{ URL::asset('assets/images/profil.png')}}" alt="" width="80" class="rounded-circle img-thumbnail ms-5 mt-3">
+                        <br>
+                        <button type="button" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
+                    </div>
                 <div class="col">
                     <p></p>
-                    <br/><div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-2 fs-3">Nama</div>
-                     <br>
-                    <div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2">
-                        No. Pasien
+                    <br/><div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:12rem;">  
+                      Slamet, S.Tr.Kes.
+                    </div>
+                     <br><br>
+                    <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:12rem">
+                      1908107010027698
                     </div>
                 </div>
                 <div class="col">
                     <p></p>
                     <br/>
-                        :
-                        <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6" style="width: 12rem ;">
-                            Dilan
-                        </div>
-                        <br>:
-                            <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2" style="width:12rem">
-                                2008107010027698
-                            </div>
-                        
+                        <div></div>
+                        <br>
+                            <div></div>
                 </div>
                 <div class="col">
-                    <p></p>
-                    <br/><div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6">
-                        Dokter PJ
-                    </div>
-                     <br>
-                    <div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2">
-                        Laboran
-                    </div>
+                      <p></p>
+                      <br/><div></div>
+                      <br>
+                      <div></div>
                 </div>
-                <div class="col">
-                    <p></p>
-                    <br/>
-                        :
-                        <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6" style="width: 12rem ;">
-                            dr. Irawan
-                        </div>
-                        <br>:
-                            <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2" style="width:12rem">
-                                Slamet, S.Tr.Kes   
-                            </div>
-                </div>
+                <div class="col"></div>
             </div>
           </div>
             <table class="table">
@@ -110,50 +93,65 @@
                     <th scope="row">1</th>
                     <td>Siti Aisyah</td>
                     <td>11 Februari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Dilan</td>
                     <td>26 Januari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Abidzar</td>
                     <td>19 Januari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
                     <td>Sulaiman Daud</td>
                     <td>14 Januari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">5</th>
                     <td>Sahlan</td>
                     <td>14 Januari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">6</th>
                     <td>Muzanni</td>
                     <td>11 Januari 2022</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">7</th>
                     <td>Siti Aminah</td>
                     <td>11 Januari 2021</td>
-                    <td>Detail</td>
+                    <td>
+                        <a href=" ">Detail</a>
+                    </td>
                 </tr>
             </tbody>
             </table>
+            <div class="button">
+                <button type="submit" class="btn btn-dark">Tambah data pasien</button>
+            </div>
         </div>  
     </div> 
-
-    <section class="hasil_lab position-absolute top-0 start-0 ms-5">
           
 </body>
 

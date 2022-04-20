@@ -24,7 +24,7 @@
 }
 
 .table {
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse
@@ -51,4 +51,10 @@ td {
 
 .container-lg {
     margin-bottom: auto;
+}
+
+.container rounded-3 {
+    margin-bottom: auto;
+    margin-right: auto;
+    border-collapse: collapse;
 }
