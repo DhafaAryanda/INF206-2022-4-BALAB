@@ -61,7 +61,7 @@
                 <button type="submit" class="btn btn-primary ms-5">Daftar akun</button></div>
             </div>
             <div class="button1"> <br>
-                <button type="submit" class="btn btn-success">Masuk sebagai laboran</button>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success">Masuk sebagai laboran</a>
             </div> <br>
             <div class="button2">
                 <button type="submit" class="btn btn-dark">Masuk sebagai pasien</button>

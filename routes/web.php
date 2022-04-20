@@ -18,7 +18,7 @@ Route::get('/dokter/login', function () {
 });
 
 Route::get('/laboran/login', function () {
-    return view('login_dokter');
+    return view('login_laboran');
 });
 
 Route::get('/laboran', function () {

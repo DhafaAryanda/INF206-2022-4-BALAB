@@ -61,7 +61,7 @@
                 <button type="submit" class="btn btn-primary ms-5">Daftar akun</button></div>
             </div>
             <div class="button1"> <br>
-                <button type="submit" class="btn btn-success">Masuk sebagai dokter</button>
+                <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>
             </div> <br>
             <div class="button2">
                 <button type="submit" class="btn btn-dark">Masuk sebagai pasien</button>
