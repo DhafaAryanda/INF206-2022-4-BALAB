@@ -24,20 +24,21 @@
 }
 
 .table {
-    border-collapse: collapse;
-    width: 100%;
-    height: 20%;
-    margin-top: 50px;
-    float: left;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse
 }
 
-.table tr th {
-    font-weight: normal;
+tr:nth-child(odd) {
+    background-color: #F8F8F8;
 }
 
-.table th td {
-    padding: 8px 20px;
-    text-align: center;
+th,
+td {
+    border: 1px solid;
+    border-color: #C4C4C4;
+    padding: 8px
 }
 
 .container2 {

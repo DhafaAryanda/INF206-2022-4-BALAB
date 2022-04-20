@@ -13,8 +13,8 @@
 <body>
     <section class="tabel-laboran">
         <nav></nav>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <div class="navbar-expand">
                         <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top">
@@ -44,44 +44,59 @@
                     </div>
                 </div>
             </nav>
-            <div class="profil">
-                <div class="row">
-                    <div class="col ms-5">
-                        <div class="profil">
-                            <img src="{{ URL::asset('assets/images/profil.png') }}" alt="" width="90" height="100">
-                        </div>
-                    </div>
-                    <div class="col ms-5">
-                        <div class="biodata">
-                            <table width="30%">
-                                <tbody>
-                                    <tr>
-                                        <td valign="top">
-                                            <table width="100%" style="padding-left: 2px; padding-right: 13px;">
-                                                <tbody>
-                                                    <tr>
-                                                        <td width="50%" valign="bottom" class="textt ms-5">Slamet S.kes</td>
-                                                        <td width="50%"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="textt">190810700027698</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="button ms-5">
-                                <button type="submit" class="btn btn-danger me-3">Keluar</button>
-                            </div>
-                        </div>
+        </div>
+        <div class="container rounded-3" style="height: 150px; width: 1200px; background-color:rgb(255, 255, 255);">
+            <div class="row fw-bold">
+                <div class="col">
+                    <img src="{{ URL::asset('assets/images/profil.png')}}" alt="" width="80" class="rounded-circle img-thumbnail ms-5 mt-3">
+                    <br><div class="badge bg-primary text-wrap tex ms-2 fw-bold mt-2 ms-5" style="width: 5rem;">keluar</div>
+                </div>
+                <div class="col">
+                    <p></p>
+                    <br/><div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-2 fs-3">Nama</div>
+                     <br>
+                    <div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2">
+                        No. Pasien
                     </div>
                 </div>
+                <div class="col">
+                    <p></p>
+                    <br/>
+                        :
+                        <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6" style="width: 12rem ;">
+                            Dilan
+                        </div>
+                        <br>:
+                            <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2" style="width:12rem">
+                                2008107010027698
+                            </div>
+                        
+                </div>
+                <div class="col">
+                    <p></p>
+                    <br/><div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6">
+                        Dokter PJ
+                    </div>
+                     <br>
+                    <div class="badge bg-white text-body text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2">
+                        Laboran
+                    </div>
+                </div>
+                <div class="col">
+                    <p></p>
+                    <br/>
+                        :
+                        <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6" style="width: 12rem ;">
+                            dr. Irawan
+                        </div>
+                        <br>:
+                            <div class="badge bg-primary text-start tex ms-2 fw-bold rounded-3 fs-6 mt-2" style="width:12rem">
+                                Slamet, S.Tr.Kes   
+                            </div>
+                </div>
             </div>
-        </div>
-
-        <table class="table">
+          </div>
+            <table class="table">
             <thead class="table-dark text-center">
                 <tr>
                     <th scope="col">No</th>
@@ -134,8 +149,12 @@
                     <td>Detail</td>
                 </tr>
             </tbody>
-        </table>
+            </table>
+        </div>  
+    </div> 
 
+    <section class="hasil_lab position-absolute top-0 start-0 ms-5">
+          
 </body>
 
 </html>

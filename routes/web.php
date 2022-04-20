@@ -24,3 +24,7 @@ Route::get('/laboran/login', function () {
 Route::get('/laboran', function () {
     return view('table-pasien');
 });
+
+Route::get('/daftar/pasien', function () {
+    return view('tabel_nama_pasien');
+});
