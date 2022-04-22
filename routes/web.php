@@ -25,6 +25,6 @@ Route::get('/laboran', function () {
     return view('table-pasien');
 });
 
-Route::get('/daftar/pasien', function () {
-    return view('tabel_nama_pasien');
+Route::get('/data/pasien', function () {
+    return view('input_data_laboran');
 });

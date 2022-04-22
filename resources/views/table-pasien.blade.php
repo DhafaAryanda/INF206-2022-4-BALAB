@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="tabel-laboran">
+    <section class="vh-100">
         <nav></nav>
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -42,41 +42,30 @@
                 </div>
             </nav>
         </div>
-        <section class="position-absolute top-50 start-50 translate-middle"><br><br><br><br><br><br><br><br>
-            <div class="container rounded-3" style="height: 150px; width: 800px; background-color:rgb(211, 211, 211);">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <div class="container rounded-3" style="height: 150px; width: 700px; background-color:rgb(211, 211, 211);">
                 <div class="row fw-bold">
                     <div class="col">
-                        <img src="{{ URL::asset('assets/images/profil.png')}}" alt="" width="80" class="rounded-circle img-thumbnail ms-5 mt-3">
+                        <img src="{{ URL::asset('assets/images/profil.png')}}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
                         <br>
                         <button type="button" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
                     </div>
                 <div class="col">
                     <p></p>
-                    <br/><div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:12rem;">  
+                    <br/><div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem;">  
                       Slamet, S.Tr.Kes.
                     </div>
                      <br><br>
-                    <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:12rem">
+                    <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem">
                       1908107010027698
                     </div>
                 </div>
-                <div class="col">
-                    <p></p>
-                    <br/>
-                        <div></div>
-                        <br>
-                            <div></div>
-                </div>
-                <div class="col">
-                      <p></p>
-                      <br/><div></div>
-                      <br>
-                      <div></div>
-                </div>
-                <div class="col"></div>
             </div>
-          </div>
-          <p class="fw-bold">Daftar Pasien</p>
+        </div>
+    </div>
+    <p class="fw-bold">Daftar Pasien</p>
+    <div class="d-flex align-items-center h-100 w-100">
+            <div class="container-xl">
             <table class="table">
             <thead class="table-dark text-center">
                 <tr>
@@ -144,13 +133,16 @@
                     </td>
                 </tr>
             </tbody>
+            </div>
             </table>
             <div class="button">
                 <button type="submit" class="btn btn-dark">Tambah data pasien</button>
             </div>
+            </div>
         </div>  
     </div> 
-          
+
+    </section>    
 </body>
 
 </html>
