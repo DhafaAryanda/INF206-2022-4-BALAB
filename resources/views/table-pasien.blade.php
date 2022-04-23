@@ -50,27 +50,28 @@
         <div class="col">
             <div class="row ">
                 <div class="col d-flex justify-content-center">
-                    <div class="container rounded-3"
-                        style="height: 150px; width: 750px; background-color:rgb(211, 211, 211);">
+                    <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80"
                                     class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <button type="button" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm"
-                                    style="width: 5rem;">keluar</button>
+                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
                             </div>
                             <div class="col">
                                 <p></p>
                                 <br />
-                                <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem;">
+                                <div class="bg-light text-center fw-bold rounded fs-6" style="width:12rem; font-family:serif;">
                                     Slamet, S.Tr.Kes.
                                 </div>
-                                <br><br>
-                                <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem">
+                                <br>
+                                <div class="bg-light text-center fw-bold rounded fs-6" style="width:12rem; font-family:serif;">
                                     1908107010027698
                                 </div>
                             </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
                         </div>
                     </div>
                 </div><br></br>
