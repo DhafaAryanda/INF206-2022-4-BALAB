@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charet="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BALAB</title>
-    <link rel="stylesheet" href="/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="sisi_pasienn.css" />
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="sisi_pasienn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="input_laboran.css">
 </head>
 
 <body>
@@ -20,6 +22,7 @@
             background-size: cover;
         }
     </style>
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="navbar-expand">
@@ -107,23 +110,16 @@
                 </div>
             </div>
         </div>
-        <div class="container"><br>
-            <h4 style="text-align: center;">Hasil Laboratorium</h4>
-            <div class="col ">
-                <div class="row justify-content-center">
-                    <div class="row justify-content-center" class="container" style="height: 240px; width: 900px; background-color:rgba(255, 254, 254, 0.705);">
-                        <div class="btn-wrapper"><br>
-                            <a href="#" class="btn pdf"><span class="fa fa-file-pdf-o"></span>PDF</a>
-                            <p></p>
-                            <a href="#" class="btn picture"><span class="fa fa-file-picture-o"></span>Rontgen</a>
-                            <p></p>
-                            <a href="#" class="btn folder"><span class=" fa fa-folder-o "></span>Diagnosa</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="wrapper">
+            <h5>File Uploader JavaScript</h5>
+            <form action="#">
+                <input class="file-input" type="file" name="file" hidden />
+                <i class="fas fa-cloud-upload-alt"></i>
+                <section class="uploaded-area"></section>
         </div>
-        <selection class="position-absolute top-100 start-50 translate-middle">
 
+        <script src="script.js"></script>
+    </section>
+</body>
 
 </html>
