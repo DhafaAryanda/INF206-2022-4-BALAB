@@ -1,0 +1,56 @@
+.container-xl {
+    height: 800px;
+    background-size: cover;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper{
+    margin: auto;
+    position: relative;
+    height: 1000px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(255, 255, 255, 0.59);
+    background: url(background.png);
+    background-size: cover;
+}
+
+.wrap .menu{
+	height: 50px;
+}
+
+.wrap .menu ul li{
+	float: right;
+	list-style-type: none;
+	padding: 30px;
+}
+
+.clear{
+	clear: both;
+}
+
+.badan{
+	height: 450px;
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+	float: left;	
+	width: 25%;
+	height: 50%;
+}
+
+/*akhir sidebar*/
+
+.wrap .badan .content{
+	float: right;
+	height: 100%;
+	width: 75%;	
+}
+
+.wrap .footer{
+	width: 100%;
+	padding: 10px;
+}
+
