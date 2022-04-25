@@ -64,7 +64,7 @@
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>
             </div> <br>
             <div class="button2">
-                <button type="submit" class="btn btn-dark">Masuk sebagai pasien</button>
+                <a href="{{ URL('/login/pasien') }}" class="btn btn-dark" role="button">Masuk sebagai pasien</a>
             </div>
         </form>
     </section>
