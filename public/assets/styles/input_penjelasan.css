@@ -1,0 +1,82 @@
+.input-penjelasan {
+    height: 1000px;
+    background: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container-xl {
+    height: 800px;
+    background-size: cover;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.btn-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-wrapper {
+    margin: 10px 0;
+}
+
+.pdf {
+    background-color: red;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.picture {
+    background-color: black;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.folder {
+    background-color: burlywood;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+.form-control {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 100px;
+    height: 100px;
+    transition: all 0.2s;
+    margin-top: 1rem;
+    margin-right: 12rem;
+}
