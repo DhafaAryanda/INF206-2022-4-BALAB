@@ -1,0 +1,56 @@
+.container-xl {
+    height: 800px;
+    background-size: cover;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.btn-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-wrapper {
+    margin: 10px 0;
+}
+
+.pdf {
+    background-color: red;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.picture {
+    background-color: black;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.folder {
+    background-color: burlywood;
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.fa {
+    margin-right: 5px;
+}

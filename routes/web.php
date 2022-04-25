@@ -40,3 +40,15 @@ Route::get('/sisi/dokter', function () {
 Route::get('/tentang/kami', function () {
     return view('tentang-kami');
 });
+
+Route::get('/sisi/pasien', function () {
+    return view('sisi_pasien');
+});
+
+Route::get('/login/pasien', function () {
+    return view('loginn_pasien');
+});
+
+Route::get('/daftar/akun/pasien', function () {
+    return view('daftar_akun');
+});
