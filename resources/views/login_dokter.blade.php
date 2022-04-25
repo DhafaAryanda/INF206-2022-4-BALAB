@@ -61,10 +61,14 @@
                 <button type="submit" class="btn btn-primary ms-5">Daftar akun</button></div>
             </div>
             <div class="button1"> <br>
-                <a href="{{ URL('/laboran/login') }}" class="btn btn-success">Masuk sebagai laboran</a>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a>
             </div> <br>
             <div class="button2">
+<<<<<<< Updated upstream
                 <a href="{{ URL('/login/pasien') }}" class="btn btn-dark">Masuk sebagai pasien</a>
+=======
+                <a href="{{ URL('/login/pasien') }}" class="btn btn-dark" role="button">Masuk sebagai pasien</a>
+>>>>>>> Stashed changes
             </div>
         </form>
     </section>
