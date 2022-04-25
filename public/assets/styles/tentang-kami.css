@@ -1,5 +1,5 @@
 .tentang-kami {
-    height: 1000px;
+    height: 1200px;
     background: url(../images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,6 @@
 .container-xl {
     height: 800px;
     background-size: cover;
-    
 }
 
 .body {

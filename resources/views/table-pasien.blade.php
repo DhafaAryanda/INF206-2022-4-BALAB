@@ -39,7 +39,7 @@
                         <a class="nav-link" href="#">Hubungi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                     </li>
                 </ul>
             </div>

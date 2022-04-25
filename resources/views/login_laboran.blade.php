@@ -25,19 +25,6 @@
                         <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Hubungi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tentang</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </div>
@@ -57,8 +44,7 @@
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
             <div class="button">
-                <button type="submit" class="btn btn-primary me-5">Submit</button>
-                <button type="submit" class="btn btn-primary ms-5">Daftar akun</button></div>
+                <a href="{{ URL('/laboran') }}" class="btn btn-primary">Masuk</a>
             </div>
             <div class="button1"> <br>
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>

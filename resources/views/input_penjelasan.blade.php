@@ -33,10 +33,10 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="#">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -49,9 +49,8 @@
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
-                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
+                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" height="110px" width="100" class="rounded-circle ms-5 mt-3" style="margin-left: 10px">
                                 <br>
-                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -119,13 +118,16 @@
             </div>
         </div><br>
         <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
-        <div class="form-floating">
-            <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 56.5rem; height: 15rem"></textarea>
-            <label for="floatingTextarea" style="margin-left: 12rem">Comments</label>
+        <div class="form-floating ms-auto md-5">
+            <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
+            <label for="floatingTextarea" style="margin-left: 13rem">Comments</label>
         </div><br>
-        <button type="submit" class="btn-success fw-bold" style="width: 5rem;">Submit</button>
+        <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 60rem;">Kirim</button>
+    </section><br>
     </section>
-    </section>
+    <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
+        <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
+    </footer>
 </body>
 
 </html>

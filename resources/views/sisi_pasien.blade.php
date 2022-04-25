@@ -33,10 +33,10 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="#">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
                             <div class="col">
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
+                                <a href="{{ URL('/login/pasien') }}" class="btn-danger fw-bold ms-5 btn-sm fs-6" style="width: 6rem">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
