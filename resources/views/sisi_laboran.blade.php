@@ -4,17 +4,19 @@
     <meta charet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>BALAB</title>
-    <link rel="stylesheet" href="{{ URL :: asset('../bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL :: asset('../bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL :: asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css') }}">
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ URL :: asset('style.css')}}" />
+    <link rel="stylesheet" href="{{ URL :: asset('assets/styles/style.css')}}">
+    <!-- JavaScript -->
+    <link rel="stylesheet" href="{{ URL :: asset('assets/js/script.js')}}">
   </head>
 
   <body>
     <style>
       body {
-        background-image: url(background.png);
+        background-image: url(/assets/images/background.png);
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -23,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <div class="navbar-expand">
-          <img src="header.png" alt=" " width=" " height="100" class="d-inline-block align-text-top" />
+          <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top" />
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,16 +49,16 @@
         </div>
       </div>
     </nav>
-    <section class="container-xl" style="width: 1200px">
+    <section class="container-xl" style="width: 900px">
       <div class="col">
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <div class="container rounded-3" style="height: 5px; width: 900px; background-color: rgba(231, 223, 223, 0.603)">
+            <div class="container rounded-3" style="height: 1px; width: 900px; background-color: rgba(231, 223, 223, 0.603) margin-left: 20px;">
               <div class="row fw-bold">
                 <div class="col">
-                  <img src="profil.png" alt="user" width="80" class="rounded-circle ms-5 mt-4" />
+                  <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-4" />
                   <br />
-                  <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem">keluar</button>
+                  <a href="{{ URL('/dokter/login') }}" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
                 </div>
                 <div class="col">
                   <p></p>
@@ -91,8 +93,8 @@
           </div>
         </div>
       </div>
-      <div class="wrapper position-absolute bottom-0 start-50 translate-middle-x">
-        <h5>File Uploader JavaScript</h5>
+      <p class="title fs-5 fw-bold text-center">Upload File</p>
+      <div class="wrapper position-absolute bottom-0 start-50 top-5 translate-middle-x">
         <form action="#">
           <input class="file-input" type="file" name="file" hidden />
           <i class="fas fa-cloud-upload-alt"></i>
@@ -101,9 +103,9 @@
         <section class="progress-area"></section>
         <section class="uploaded-area"></section>
       </div>
-
       <div class="position-absolute top-100 start-50 translate-middle">
-        <br /><br /><br /><br /><br /><br /><br />
+        <p></p>
+        <br><br><br><br><br><br><br><br><br>
         <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
         <div class="form-floating">
           <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" autofocus>
@@ -116,11 +118,11 @@
       </div>
       <script src="script.js"></script>
     </section>
-
+    <br><br><br>
     <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
       <b>
         <p>
-          Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="wa.png" width="50" height="50" /></a>082366286069
+          Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
         </p>
       </b>
     </footer>

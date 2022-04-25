@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="#">Bantuan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
@@ -138,8 +138,11 @@
                     <a href="{{ URL('/input/penjelasan') }}" class="btn btn-primary">Berikut</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </div><br><br>
+        <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
+            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
+        </footer>
+        </section>
 </body>
 
 </html>

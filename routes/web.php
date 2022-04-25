@@ -52,3 +52,7 @@ Route::get('/login/pasien', function () {
 Route::get('/daftar/akun/pasien', function () {
     return view('daftar_akun');
 });
+
+Route::get('/sisi/laboran', function () {
+    return view('sisi_laboran');
+});
