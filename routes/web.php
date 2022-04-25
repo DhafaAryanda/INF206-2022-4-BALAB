@@ -28,3 +28,15 @@ Route::get('/laboran', function () {
 Route::get('/data/pasien', function () {
     return view('input_data_laboran');
 });
+
+Route::get('/input/penjelasan', function () {
+    return view('input_penjelasan');
+});
+
+Route::get('/sisi/dokter', function () {
+    return view('sisi-dokter');
+});
+
+Route::get('/tentang/kami', function () {
+    return view('tentang-kami');
+});
