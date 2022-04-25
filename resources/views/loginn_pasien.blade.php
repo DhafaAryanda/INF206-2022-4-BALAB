@@ -64,10 +64,10 @@
                 <button type="submit" class="btn btn-primary" button style="background-color:green">Daftar Akun</button>
             </div>
             <div class="button1"> <br>
-                <button type="submit" class="btn btn-success">Masuk sebagai laboran</button>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
             <div class="button2">
-                <button type="submit" class="btn btn-dark">Masuk sebagai dokter</button>
+                <a href="{{ URL('/dokter/login') }}" class="btn btn-dark"role="button">Masuk sebagai dokter</a>
             </div>
         </form>
     </section>
