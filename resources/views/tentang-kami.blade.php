@@ -31,9 +31,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Hubungi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -46,7 +43,7 @@
             <div class="col">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
-                        <div class="container rounded-3" style="height: 200px; width: 650px; background-color:rgba(125, 200, 247, 0.603);">
+                        <div class="container rounded-3" style="height: 275px; width: 660px; background-color:rgba(125, 200, 247, 0.603);">
                             <div class="row fw-bold">
                                 <div class="col">
                                     <p></p>
@@ -60,7 +57,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="col d-flex justify-content-md-center">
-                                                <div class="container rounded-3" style="height: 220px; width: 650px; background-color:rgba(125, 200, 247, 0.603);">
+                                                <div class="container rounded-3" style="height: 273px; width: 660px; background-color:rgba(125, 200, 247, 0.603);">
                                                     <div class="row fw-bold">
                                                         <div class="col">
                                                             <p></p>
@@ -75,7 +72,7 @@
                                                         <div class="col">
                                                             <div class="row">
                                                                 <div class="col d-flex justify-content-around">
-                                                                    <div class="container rounded-3" style="height: 200px; width: 650px; background-color:rgba(125, 200, 247, 0.603);">
+                                                                    <div class="container rounded-3" style="height: 220px; width: 660px; background-color:rgba(125, 200, 247, 0.603);">
                                                                         <div class="row w-bold">
                                                                             <div class="col">
                                                                                 <p></p>

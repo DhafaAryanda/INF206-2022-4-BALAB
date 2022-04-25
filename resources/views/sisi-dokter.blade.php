@@ -39,7 +39,7 @@
                         <a class="nav-link" href="#">Hubungi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -57,8 +57,8 @@
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80"
                                     class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <button type="button" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm"
-                                    style="width: 5rem;">keluar</button>
+                                <a href="{{ URL('/dokter/login') }}" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm"
+                                    style="width: 5rem;">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -133,6 +133,9 @@
                     <div class="button">
                         <button type="submit" class="btn btn-dark">Tambah data pasien</button>
                     </div>
+                </div>
+                <div class="button1">
+                    <a href="{{ URL('/input/penjelasan') }}" class="btn btn-primary">Berikut</a>
                 </div>
             </div>
         </div>
