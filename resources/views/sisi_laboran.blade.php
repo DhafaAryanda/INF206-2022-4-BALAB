@@ -53,7 +53,7 @@
       <div class="col">
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <div class="container rounded-3" style="height: 1px; width: 900px; background-color: rgba(231, 223, 223, 0.603) margin-left: 20px;">
+            <div class="container rounded-3" style="height: 1px; width: 900px; background-color: rgba(231, 223, 223, 0.603) margin-left 20px">
               <div class="row fw-bold">
                 <div class="col">
                   <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-4" />

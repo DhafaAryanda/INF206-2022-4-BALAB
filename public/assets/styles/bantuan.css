@@ -2,6 +2,7 @@
     height: 800px;
     background: url(../images/background.png);
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
 

@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
@@ -56,7 +56,7 @@
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80"
                                     class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
+                                <a href="{{ URL('/laboran/login') }}" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -102,7 +102,7 @@
                                 <td>Dilan</td>
                                 <td>26 Januari 2022</td>
                                 <td>
-                                    <a href=" ">Detail</a>
+                                    <a href="{{ URL('/sisi/laboran') }}">Detail</a>
                                 </td>
                             </tr>
                             <tr>
@@ -148,7 +148,7 @@
                         </tbody>
                     </table>
                     <div class="button">
-                        <button type="submit" class="btn btn-dark">Tambah data pasien</button>
+                        <a href="{{ URL('/tambah') }}" class="btn btn-dark">Tambah data pasien</a>
                     </div>
                 </div>
             </div>
