@@ -36,10 +36,10 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                        <a class="nav-link" href="#">Hubungi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                        <a class="nav-link" href="#">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -57,8 +57,8 @@
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80"
                                     class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <a href="{{ URL('/dokter/login') }}" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm"
-                                    style="width: 5rem;">keluar</a>
+                                <button type="button" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm"
+                                    style="width: 5rem;">keluar</button>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -93,7 +93,7 @@
                                 <td>Dilan</td>
                                 <td>200890341023</td>
                                 <td>
-                                    <a href="{{ URL('/sisi/pasien') }}">Detail</a>
+                                    <a href=" ">Detail</a>
                                 </td>
                             </tr>
                             <tr>
@@ -131,18 +131,12 @@
                         </tbody>
                     </table>
                     <div class="button">
-                        <a href="{{ URL('/tambah')}}" class="btn btn-dark">Tambah data pasien</a>
+                        <button type="submit" class="btn btn-dark">Tambah data pasien</button>
                     </div>
                 </div>
-                <div class="button1">
-                    <a href="{{ URL('/input/penjelasan') }}" class="btn btn-primary">Berikut</a>
-                </div>
             </div>
-        </div><br><br>
-        <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
-            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
-        </footer>
-        </section>
+        </div>
+    </section>
 </body>
 
 </html>
