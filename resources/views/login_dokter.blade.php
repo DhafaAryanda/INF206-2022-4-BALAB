@@ -54,7 +54,7 @@
             </div>
         </form>
     </section>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>
