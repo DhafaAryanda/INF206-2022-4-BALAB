@@ -11,7 +11,7 @@
 
 <body>
     <section class="bantuan">
-        <nav></nav><br>
+        <nav></nav>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -28,13 +28,16 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#">Profil</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                             </li>
                         </ul>
                     </div>
                     <div class="container-fluid">
                         <a class="navbar-brand"></a>
-                        <form class="d-flex" style="width: 300px; margin-left: 550px; top-20">
+                        <form class="d-flex" style="width: 300px; margin-left: 490px; top:-20;">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-dark" type="submit">Search</button>
                         </form>
@@ -42,7 +45,7 @@
                 </div>
             </nav>
             <div class="my-5 container col-6"></div>
-            <div class="accordion accordion-flush ms-5" id="accordionFlushExample" style="width: 650px;">
+            <div class="accordion accordion-flush ms-5" id="accordionFlushExample" style="width: 650px">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">

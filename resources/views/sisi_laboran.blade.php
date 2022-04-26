@@ -94,14 +94,12 @@
         </div>
       </div>
       <p class="title fs-5 fw-bold text-center">Upload File</p>
-      <div class="wrapper position-absolute bottom-0 start-50 top-5 translate-middle-x">
+      <div class="wrapper position-absolute bottom-0 start-50 top-50 translate-middle-x">
         <form action="#">
           <input class="file-input" type="file" name="file" hidden />
           <i class="fas fa-cloud-upload-alt"></i>
           <p>Browse File to Upload</p>
         </form>
-        <section class="progress-area"></section>
-        <section class="uploaded-area"></section>
       </div>
       <div class="position-absolute top-100 start-50 translate-middle">
         <p></p>
@@ -116,8 +114,8 @@
           <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
         </div>
       </div>
-      <script src="script.js"></script>
-    </section>
+      <script src="{{ URL::asset('assets/js/script.js')}}"></script>
+    </section>  
     <br><br><br>
     <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
       <b>
