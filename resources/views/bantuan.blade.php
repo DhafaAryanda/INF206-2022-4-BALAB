@@ -28,7 +28,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Profil</a>
+                                <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
