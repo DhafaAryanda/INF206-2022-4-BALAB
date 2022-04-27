@@ -1,6 +1,6 @@
 .home-dl {
-    height: 825px;
-    background: url(bg1.png);
+    height: 1000px;
+    background: url(bg11.png);
     background-repeat: no repeat;
     background-size:cover;
     position: relative;
@@ -23,14 +23,25 @@
     width: 255px;
     height: 200px;
     padding-right: 20px;
+    transform: translateY(220%);
 }
 
-.sidebar2 {
+.text-center {
     top: 10px;
     float: center;
     width: 255px;
     height: 200px;
-    padding-left: 30px;
+    padding-left: 20px;
+    transform: translateY(15%);
+}
+
+.text-center2 {
+    top: 10px;
+    float: center;
+    width: 255px;
+    height: 200px;
+    padding-left: 20px;
+    transform: translateX(145%);
 }
 
 .widget-pict {
@@ -41,24 +52,43 @@
     border-radius: 5px;
 }
 
+.widget-pict3 {
+    border-radius: 5px;
+}
+
 .sidebar .widget{
-    padding: 20px;
+    padding: 30px;
     margin:0 0 25px;
     background: #fff;
     border-bottom: 2px solid #fff;
     transition: all 0.5s ease;
     border-radius: 15px;
     border: 1px solid rgba(10, 128, 253, 0.55);
+    transform: translateX(-40%);
 }
 
-.sidebar2 .widget2{
-    padding: 20px;
+.text-center .widget2{
+    padding: 50px;
     margin:0 0 25px;
     background: #fff;
     border-bottom: 2px solid #fff;
     transition: all 0.5s ease;
     border-radius: 15px;
     border: 1px solid rgba(32, 122, 218, 0.55);
+    transform: translateX(270%);
+}
+
+.text-center2 .widget3{
+    padding: 50px;
+    margin-left: 20px;
+    margin:0 0 25px;
+    background: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    border: 1px solid rgba(32, 122, 218, 0.55);
+    transform: translateY(-60%);
+    text-align: center;
 }
 
 .sidebar .widget:hover {
@@ -66,7 +96,12 @@
     box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
 }
 
-.sidebar2 .widget2:hover {
+.text-center .widget2:hover {
+    border-bottom: 4px solid #db3434;
+    box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
+}
+
+.text-center2 .widget3:hover {
     border-bottom: 4px solid #db3434;
     box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
 }
@@ -80,7 +115,15 @@
     text-transform: uppercase;
 }
 
-.sidebar2 .widget2 h3{
+.text-center .widget2 h3{
+    padding: 0;
+    margin:0 0 15px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.text-center2 .widget3 h3{
     padding: 0;
     margin:0 0 15px;
     color: #000000;
@@ -110,6 +153,17 @@
     font-weight: 700;
 }
 
+.widget3 .loogo{
+    color: #000;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.text-center2 .widget3 h3{
+    text-align: center;
+}
+
 .faq-selengkapnya:hover {
     margin-left: 10px;
 }
@@ -123,4 +177,23 @@
     transition: all 0.5s ease;
     text-decoration: none;
     font-weight: 400;
+}
+
+.navbar-nav {
+    float: right;
+    margin-right: -25px;
+    
+}
+
+.navbar-nav a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.navbar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
