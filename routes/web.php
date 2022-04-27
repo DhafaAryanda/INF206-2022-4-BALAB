@@ -64,3 +64,11 @@ Route::get('/bantuan', function () {
 Route::get('/tambah', function () {
     return view('Tambah_pasien');
 });
+
+Route::get('/profil/dokter', function () {
+    return view('profil_dokter');
+});
+
+Route::get('/profil/laboran', function () {
+    return view('profil_laboran');
+});
