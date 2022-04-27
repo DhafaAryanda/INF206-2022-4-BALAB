@@ -25,19 +25,6 @@
                             <span class="navbar-toggler-icon"></span>
                             </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tentang</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Bantuan</a>
-                                </li>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </div>
@@ -56,18 +43,18 @@
                 <label class="form-check-label" for="exampleCheck1">ingat saya</label>
             </div>
             <div class="button">
-                <button type="submit" class="btn btn-primary">Masuk</button>
+                <a href="{{ URL('/sisi/pasien') }}" class="btn btn-primary">Masuk</a>
             </div>
             <div class="form-text">Lupa kata sandi?</div>
             </div>
             <div class="button">
-                <button type="submit" class="btn btn-primary" button style="background-color:green">Daftar Akun</button>
+                <a href="{{ URL('/daftar/akun/pasien') }}" class="btn btn-primary" button style="background-color:green">Daftar Akun</a>
             </div>
             <div class="button1"> <br>
-                <button type="submit" class="btn btn-success">Masuk sebagai laboran</button>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
             <div class="button2">
-                <button type="submit" class="btn btn-dark">Masuk sebagai dokter</button>
+                <a href="{{ URL('/dokter/login') }}" class="btn btn-dark"role="button">Masuk sebagai dokter</a>
             </div>
         </form>
     </section>

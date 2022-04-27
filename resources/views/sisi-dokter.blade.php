@@ -48,103 +48,84 @@
         <div class="col">
             <div class="row ">
                 <div class="col d-flex justify-content-center">
-                    <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
+                    <div class="container rounded-3" style="height: 150px; width: 750px; background-color:rgb(211, 211, 211);">
                         <div class="row fw-bold">
                             <div class="col">
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <a href="{{ URL('/laboran/login') }}" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
+                                <a href="{{ URL('/dokter/login') }}" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
                                 <br />
-                                <div class="bg-light text-center fw-bold rounded fs-6" style="width:12rem; font-family:serif;">
-                                    Slamet, S.Tr.Kes.
+                                <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem;">
+                                    dr. Irawan
                                 </div>
-                                <br>
-                                <div class="bg-light text-center fw-bold rounded fs-6" style="width:12rem; font-family:serif;">
-                                    1908107010027698
+                                <br><br>
+                                <div class="badge bg-dark tex ms-2 fw-bold rounded fs-6" style="width:11rem">
+                                    1808107010027698
                                 </div>
                             </div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
                         </div>
                     </div>
                 </div><br></br>
                 <div class="d-flex justify-content-center">
                     <h2>Daftar Pasien</h2>
                 </div>
-                <div class="container-fluid" style="width: 925px; margin-left:185px;">
+                <div class="container-fluid" style="width: 775px; margin-left: 260px;">
                     <table class="table">
                         <thead class="table-dark text-center">
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Pasien</th>
-                                <th scope="col">Tanggal Periksa</th>
-                                <th scope="col">Hasil Lab</th>
+                                <th scope="col">Nomor Pasien</th>
+                                <th scope="col">Opsi</th>
                             </tr>
                         </thead>
                         <tbody class="table-primary text-center">
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Siti Aisyah</td>
-                                <td>11 Februari 2022</td>
+                                <td>Dilan</td>
+                                <td>200890341023</td>
+                                <td>
+                                    <a href="{{ URL('/input/penjelasan') }}">Detail</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Sulaiman Daud</td>
+                                <td>200823899021</td>
                                 <td>
                                     <a href=" ">Detail</a>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>Dilan</td>
-                                <td>26 Januari 2022</td>
-                                <td>
-                                    <a href="{{ URL('/sisi/laboran') }}">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
                                 <th scope="row">3</th>
-                                <td>Abidzar</td>
-                                <td>19 Januari 2022</td>
+                                <td>Sahlan</td>
+                                <td>200890356789</td>
                                 <td>
                                     <a href=" ">Detail</a>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Sulaiman Daud</td>
-                                <td>14 Januari 2022</td>
+                                <td>Siti Aminah</td>
+                                <td>200977898989</td>
                                 <td>
                                     <a href=" ">Detail</a>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
-                                <td>Sahlan</td>
-                                <td>14 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
                                 <td>Muzanni</td>
-                                <td>11 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Siti Aminah</td>
-                                <td>11 Januari 2021</td>
+                                <td>200799776655</td>
                                 <td>
                                     <a href=" ">Detail</a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="container-fluid" style="margin-left: 330px;">
+                    <div class="container-fluid" style="margin-left: 260px;">
                         <div class="container">
                             <!-- Button trigger modal -->
                             <!-- Button trigger modal -->
@@ -182,14 +163,13 @@
                         </div>
                     </div>
                 </div>
-            </div><br><br>
-            <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right;">
-                <b>
-                    <p>
-                        Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
-                    </p>
-                </b>
-            </footer>
+            </div>
+        </div><br><br><br><br>
+        <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
+            <b>
+                <p>Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p>
+            </b>
+        </footer>
     </section>
     <script src="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.bundle.min.js') }}"></script>
 </body>

@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>BALAB</title>
     <link rel="stylesheet" href="{{URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{URL :: asset('assets/styles/sisi_pasienn.css')}}">
     <link rel="stylesheet" href="{{URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{URL :: asset('assets/styles/sisi_pasienn.css')}}">
     <link rel="stylesheet" href="{{URL :: asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+</head>
+<!-- My CSS -->
+<link rel="stylesheet" href="{{URL :: asset('assets/styles/input_penjelasan.css')}}">
 </head>
 
 <body>
-
-    <section class="sisi-pasien">
+    <section class="input-penjelasan">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="navbar-expand">
                 <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+          <span class="navbar-toggler-icon"></span>
+          </button>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="#">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                        <a class="nav-link" href="#">Bantuan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
@@ -49,9 +49,8 @@
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
-                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
+                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" height="110px" width="100" class="rounded-circle ms-5 mt-3" style="margin-left: 10px">
                                 <br>
-                                <a href="{{ URL('/login/pasien') }}" class="btn-danger fw-bold ms-5 btn-sm fs-6" style="width: 6rem">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -117,20 +116,18 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <br/><br/><br/><br/><br/>
-        <selection class="position-absolute top-98 start-50 translate-middle">
-            <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
-            <div class="form-floating">
-                <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" autofocus>Secara umum dari hasil lab tersebut terdapat peningkatan leukosit (sel darah putih) yang dapat terjadi baik karena infeksi, peradangan, alergi, stres, keganasan dan sebagainya. Sel darah putih berperan dalam kekebalan tubuh. Oleh karena penyebab peningkatan nilai tersebut dapat terjadi karena berbagai hal, perlu dilakukan pemeriksaan yang lebih lengkap agar diketahui penyebab keluhan dan dapat diberikan penanganan sesuai. Semoga membantu.</textarea>
-                <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
-            </div>
-        </selection>
+        </div><br>
+        <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
+        <div class="form-floating ms-auto md-5">
+            <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
+            <label for="floatingTextarea" style="margin-left: 13rem">Comments</label>
+        </div><br>
+        <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 60rem;">Kirim</button>
+    </section><br>
     </section>
-        <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
-            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
-        </footer>
-    </section>
-    </body>
+    <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
+        <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
+    </footer>
+</body>
 
 </html>
