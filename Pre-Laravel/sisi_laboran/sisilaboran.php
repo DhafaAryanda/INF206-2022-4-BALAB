@@ -46,25 +46,24 @@ if ($koneksi == false) {
   mysqli_close($koneksi);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>BALAB</title>
-    <link rel="stylesheet" href="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL :: asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{ URL :: asset('assets/styles/style.css')}}">
-    <!-- JavaScript -->
-    <link rel="stylesheet" href="{{ URL :: asset('assets/js/script.js')}}">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <style>
       body {
-        background-image: url(/assets/images/background.png);
+        background-image: url(background.png);
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -73,40 +72,43 @@ if ($koneksi == false) {
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <div class="navbar-expand">
-          <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top" />
+          <img src="header.png" alt=" " width=" " height="100" class="d-inline-block align-text-top" />
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+        
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
+              <a class="nav-link" href="#">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+              <a class="nav-link" href="#">Hubungi></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+              <a class="nav-link" href="#">Tentang</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <section class="container-xl" style="width: 900px">
+    
+    <section class="container-xl" style="width: 1200px">
       <div class="col">
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <div class="container rounded-3" style="height: 1px; width: 900px; background-color: rgba(231, 223, 223, 0.603) margin-left 20px">
+            <div class="container rounded-3" style="height: 5px; width: 900px; background-color: rgba(231, 223, 223, 0.603)">
               <div class="row fw-bold">
                 <div class="col">
-                  <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-4" />
+                  <img src="profil.png" alt="user" width="80" class="rounded-circle ms-5 mt-4" />
                   <br />
-                  <a href="{{ URL('/dokter/login') }}" class="btn btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
+                  <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem">keluar</button>
                 </div>
                 <div class="col">
                   <p></p>
@@ -141,17 +143,19 @@ if ($koneksi == false) {
           </div>
         </div>
       </div>
-      <p class="title fs-5 fw-bold text-center">Upload File</p>
-      <div class="wrapper position-absolute bottom-0 start-50 top-50 translate-middle-x">
+      <div class="wrapper position-absolute bottom-0 start-50 translate-middle-x">
+        <h5>File Uploader JavaScript</h5>
         <form action="#">
           <input class="file-input" type="file" name="file" hidden />
           <i class="fas fa-cloud-upload-alt"></i>
           <p>Browse File to Upload</p>
         </form>
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
       </div>
+
       <div class="position-absolute top-100 start-50 translate-middle">
-        <p></p>
-        <br><br><br><br><br><br><br><br><br>
+        <br /><br /><br /><br /><br /><br /><br />
         <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
         <div class="form-floating">
           <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" autofocus>
@@ -162,13 +166,13 @@ if ($koneksi == false) {
           <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
         </div>
       </div>
-      <script src="{{ URL::asset('assets/js/script.js')}}"></script>
-    </section>  
-    <br><br><br>
+      <script src="script.js"></script>
+    </section>
+
     <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
       <b>
         <p>
-          Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
+          Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="wa.png" width="50" height="50" /></a>082366286069
         </p>
       </b>
     </footer>
