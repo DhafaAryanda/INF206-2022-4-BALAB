@@ -72,3 +72,11 @@ Route::get('/profil/dokter', function () {
 Route::get('/profil/laboran', function () {
     return view('profil_laboran');
 });
+
+Route::get('/Home/laboran', function () {
+    return view('HomeLaboran');
+});
+
+Route::get('/Home/dokter', function () {
+    return view('HomeDokter');
+});
