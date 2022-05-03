@@ -1,0 +1,149 @@
+.home-p {
+    height: 1000px;
+    background: url(bg11.png);
+    background-repeat: no repeat;
+    background-size:cover;
+    position: relative;
+}
+
+.container {
+    width: 0;
+    margin-bottom: 200px;
+    float: left;
+}
+
+.info-panel {
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.sidebar {
+    top: 10px;
+    float: right;
+    width: 255px;
+    height: 200px;
+    padding-right: 20px;
+    transform: translateY(220%);
+}
+
+.text-center {
+    top: 10px;
+    float: center;
+    width: 255px;
+    height: 300px;
+    padding-left: 20px;
+    transform: translateY(15%);
+}
+
+.widget-pict {
+    border-radius: 8px;
+}
+
+.widget-pict2 {
+    border-radius: 10px;
+}
+
+.sidebar .widget{
+    padding: 30px;
+    margin:0 0 25px;
+    background: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    border: 1px solid rgba(10, 128, 253, 0.55);
+    transform: translateX(-40%);
+}
+
+.text-center .widget2{
+    padding: 35px;
+    margin:0 0 25px;
+    background: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    border: 1px solid rgba(32, 122, 218, 0.55);
+    transform: translateX(200%);
+}
+
+.sidebar .widget:hover {
+    border-bottom: 4px solid #3498db;
+    box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
+}
+
+.text-center .widget2:hover {
+    border-bottom: 4px solid #db3434;
+    box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
+}
+
+.sidebar .widget h2{
+    padding: 0;
+    margin:0 0 15px;
+    color: #3498db;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.text-center .widget2 h3{
+    padding: 0;
+    margin:0 0 15px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.sidebar .widget p {
+    font-size: 14px;
+}
+
+.sidebar .widget p:last-child {
+    margin: 0;
+}
+
+.widget .faq-selengkapnya{
+    color: #000;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.widget2 .loogo{
+    color: #000;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.faq-selengkapnya:hover {
+    margin-left: 10px;
+}
+
+.loogo:hover {
+    margin-left: 10px;
+}
+
+.col-lg p{
+    color: #000;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.navbar-nav {
+    float: right;
+    margin-right: -25px;
+    
+}
+
+.navbar-nav a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.navbar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
