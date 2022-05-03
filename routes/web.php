@@ -80,3 +80,15 @@ Route::get('/Home/laboran', function () {
 Route::get('/Home/dokter', function () {
     return view('HomeDokter');
 });
+
+Route::get('/Bantuan/laboran', function () {
+    return view('bantuan_laboran');
+});
+
+Route::get('/Bantuan/dokter', function () {
+    return view('bantuan_dokter');
+});
+
+Route::get('/Tentang/laboran', function () {
+    return view('tentang_laboran');
+});

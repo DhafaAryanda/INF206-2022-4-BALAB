@@ -34,10 +34,10 @@
                         <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                        <a class="nav-link" href="{{ URL('/Bantuan/laboran') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/Tentang/laboran') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
     <section class="container-xl">
         <div class="col">
             <div class="row ">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center" style="margin-left: 175px;">
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
@@ -73,7 +73,7 @@
                     </div>
                 </div><br></br>
                 <div class="d-flex justify-content-center">
-                    <h2>Daftar Pasien</h2>
+                    <h2 style="margin-left: 150px;">Daftar Pasien</h2>
                 </div>
                 <div class="container-fluid" style="width: 925px; margin-left:185px;">
                     <table class="table">
