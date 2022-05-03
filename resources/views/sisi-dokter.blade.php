@@ -34,10 +34,10 @@
                         <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                        <a class="nav-link" href="{{ URL('/Bantuan/dokter') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/Tentang/dokter') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
         <div class="col">
             <div class="row ">
                 <div class="col d-flex justify-content-center">
-                    <div class="container rounded-3" style="height: 150px; width: 750px; background-color:rgb(211, 211, 211);">
+                    <div class="container rounded-3" style="height: 150px; width: 750px; background-color:rgb(211, 211, 211); margin-left:260px;">
                         <div class="row fw-bold">
                             <div class="col">
                                 <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
@@ -70,7 +70,7 @@
                     </div>
                 </div><br></br>
                 <div class="d-flex justify-content-center">
-                    <h2>Daftar Pasien</h2>
+                    <h2 style="margin-left:140px;">Daftar Pasien</h2>
                 </div>
                 <div class="container-fluid" style="width: 775px; margin-left: 260px;">
                     <table class="table">

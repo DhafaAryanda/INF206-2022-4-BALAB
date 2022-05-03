@@ -30,13 +30,16 @@
                             <a class="nav-link active" aria-current="page" href="{{ URL('/Home/dokter')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
+                            <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ URL('/bantuan')}}">Bantuan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                            <a class="nav-link" href="{{ URL('/Tentang/dokter') }}">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ URL('/sisi/dokter') }}">Daftar Pasien</a>
                         </li>
                     </ul>
                 </div>

@@ -34,10 +34,10 @@
                                 <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                                <a class="nav-link" href="{{ URL('/Bantuan/dokter') }}">Bantuan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                                <a class="nav-link" href="{{ URL('/Tentang/dokter') }}">Tentang</a>
                             </li>
                         </ul>
                     </div>
@@ -100,14 +100,14 @@
                 </div>
 
                 <h3>Daftar Pasien</h3>
-                <a href="{{ URL('/laboran')}}" class="loogo">cek-></a>
+                <a href="{{ URL('/sisi/dokter')}}" class="loogo">cek-></a>
             </div>
         </div>
 
         <div class="text-center2">
             <div class="widget3">
                 <div>
-                    <img class="widget-pict3" src="{{ URL('penjelasanlogo.png')}}" alt="logo" width="80">
+                    <img class="widget-pict3" src="{{ URL('assets/images/penjelasanlogo.png')}}" alt="logo" width="80">
                 </div>
                 <br />
                 <h3>Upload Penjelasan</h3>

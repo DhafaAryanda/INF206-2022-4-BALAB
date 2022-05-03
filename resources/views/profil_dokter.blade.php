@@ -35,10 +35,16 @@
                         <a class="nav-link active" aria-current="page" href="{{ URL('/Home/dokter')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                        <a class="nav-link" href="{{ URL('/input/penjelasan') }}">Input Penjelasan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/sisi/dokter') }}">Daftar Pasien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL('/Bantuan/dokter') }}">Bantuan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL('/Tentang/dokter') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
