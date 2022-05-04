@@ -92,3 +92,11 @@ Route::get('/Bantuan/dokter', function () {
 Route::get('/Tentang/laboran', function () {
     return view('tentang_laboran');
 });
+
+Route::get('/Home/pasien', function () {
+    return view('HomePasien');
+});
+
+Route::get('/Profil/pasien', function () {
+    return view('profil_pasien');
+});
