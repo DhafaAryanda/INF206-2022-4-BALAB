@@ -11,35 +11,33 @@
 </head>
 
 <body>
-<style>
-    body{
-        background-image: url(/assets/images/background.png);
-    }
-</style>
-<nav class="navbar navbar-expand-lg navbar-light">
+    <style>
+        body {
+            background-image: url(/assets/images/background.png);
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="navbar-expand">
-                <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100"
-                    class="d-inline-block align-text-top">
+                <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ URL('/Home/laboran')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
+                        <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="{{ URL('/Bantuan/laboran') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/Tentang/laboran') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -49,14 +47,13 @@
     <section class="container-xl">
         <div class="col">
             <div class="row ">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center" style="margin-left: 175px;">
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
-                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80"
-                                    class="rounded-circle ms-5 mt-3">
+                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
                                 <br>
-                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
+                                <a href="{{ URL('/laboran/login') }}" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</a>
                             </div>
                             <div class="col">
                                 <p></p>
@@ -76,9 +73,9 @@
                     </div>
                 </div><br></br>
                 <div class="d-flex justify-content-center">
-                    <h2>Daftar Pasien</h2>
+                    <h2 style="margin-left: 150px;">Daftar Pasien</h2>
                 </div>
-                <div class="container-fluid">
+                <div class="container-fluid" style="width: 925px; margin-left:185px;">
                     <table class="table">
                         <thead class="table-dark text-center">
                             <tr>
@@ -102,7 +99,7 @@
                                 <td>Dilan</td>
                                 <td>26 Januari 2022</td>
                                 <td>
-                                    <a href=" ">Detail</a>
+                                    <a href="{{ URL('/sisi/laboran') }}">Detail</a>
                                 </td>
                             </tr>
                             <tr>
@@ -147,13 +144,54 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="button">
-                        <button type="submit" class="btn btn-dark">Tambah data pasien</button>
+                    <div class="container-fluid" style="margin-left: 330px;">
+                        <div class="container">
+                            <!-- Button trigger modal -->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Tambah Pasien
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Pasien</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div>
+                                                    <label for="nama" class="form-label">Nama</label>
+                                                    <input type="text" class="form-control" id="nama">
+                                                </div>
+                                                <div>
+                                                    <label for="tanggal" class="form-label">Tanggal Periksa</label>
+                                                    <input type="date" class="form-control" id="tanggal">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>
+                                            <button type="button" class="btn btn-primary">Simpan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div><br><br>
+            <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right;">
+                <b>
+                    <p>
+                        Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
+                    </p>
+                </b>
+            </footer>
     </section>
+    <script src="{{ URL :: asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>

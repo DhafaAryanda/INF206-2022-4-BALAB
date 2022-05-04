@@ -29,6 +29,18 @@ Route::get('/data/pasien', function () {
     return view('input_data_laboran');
 });
 
+Route::get('/input/penjelasan', function () {
+    return view('input_penjelasan');
+});
+
+Route::get('/sisi/dokter', function () {
+    return view('sisi-dokter');
+});
+
+Route::get('/tentang/kami', function () {
+    return view('tentang-kami');
+});
+
 Route::get('/sisi/pasien', function () {
     return view('sisi_pasien');
 });
@@ -39,4 +51,44 @@ Route::get('/login/pasien', function () {
 
 Route::get('/daftar/akun/pasien', function () {
     return view('daftar_akun');
+});
+
+Route::get('/sisi/laboran', function () {
+    return view('sisi_laboran');
+});
+
+Route::get('/bantuan', function () {
+    return view('bantuan');
+});
+
+Route::get('/tambah', function () {
+    return view('Tambah_pasien');
+});
+
+Route::get('/profil/dokter', function () {
+    return view('profil_dokter');
+});
+
+Route::get('/profil/laboran', function () {
+    return view('profil_laboran');
+});
+
+Route::get('/Home/laboran', function () {
+    return view('HomeLaboran');
+});
+
+Route::get('/Home/dokter', function () {
+    return view('HomeDokter');
+});
+
+Route::get('/Bantuan/laboran', function () {
+    return view('bantuan_laboran');
+});
+
+Route::get('/Bantuan/dokter', function () {
+    return view('bantuan_dokter');
+});
+
+Route::get('/Tentang/laboran', function () {
+    return view('tentang_laboran');
 });

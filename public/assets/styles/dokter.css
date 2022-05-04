@@ -8,7 +8,7 @@
 .login-dokter form {
     position: absolute;
     width: 400px;
-    height: 440px;
+    height: 460px;
     left: 95px;
     top: 200px;
     background: rgba(230, 230, 230, 0.82);
@@ -35,8 +35,10 @@
 
 .button1 {
     text-align: center;
+    align-items: center;
 }
 
 .button2 {
     text-align: center;
+    align-items: center;
 }

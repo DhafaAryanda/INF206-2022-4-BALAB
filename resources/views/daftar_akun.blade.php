@@ -25,19 +25,6 @@
                             <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#">Tentang</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#">Bantuan</a>
-                                </li>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </nav>
             </div>
@@ -63,7 +50,7 @@
                     <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                 </div>
                 <div class="button">
-                    <button type="submit" class="btn btn-primary" button style="background-color:green">Daftar</button>
+                    <a href="{{ URL('/login/pasien') }}" class="btn btn-primary" button style="background-color:green">Daftar</a>
                 </div>
             </form>
         </section>
