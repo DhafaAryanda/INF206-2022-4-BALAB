@@ -128,7 +128,7 @@
         </selection>
     </section>
         <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
-            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
+            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6285213345327"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>085213345327</p></b>
         </footer>
     </section>
     </body>
