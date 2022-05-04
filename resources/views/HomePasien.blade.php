@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>BALAB</title>
     <link rel="stylesheet" href="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/styles/home-dl.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/styles/home-p.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/styles.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/styles/homedl.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/styles/homep.css')}}">
 </head>
 
 <body>
-    <section class="home-dl">
-        <nav></nav>
+    <section class="home-p">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -28,22 +27,22 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link active" aria-current="page" href="{{ URL('/Home/laboran')}}">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{ URL('/Home/pasien')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL('/profil/laboran') }}">Profil</a>
+                                <a class="nav-link" href="{{ URL('/Profil/pasien')}}">Profil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL('/Bantuan/laboran') }}">Bantuan</a>
+                                <a class="nav-link" href="{{ URL('/bantuan')}}">Bantuan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL('/Tentang/laboran') }}">Tentang</a>
+                                <a class="nav-link" href="{{ URL('/tentang/kami')}}">Tentang</a>
                             </li>
                         </ul>
                     </div>
-                        <div class="button">
-                            <a href="{{ URL('/laboran/login')}}" class="btn btn-danger">Logout</a>
-                        </div>
+                    <div class="button">
+                        <a href="{{ URL('/login/pasien')}}" class="btn btn-danger">Logout</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -99,29 +98,14 @@
         <div class="text-center">
             <div class="widget2">
                 <div>
-                    <img class="widget-pict2" src="{{ URL('assets/images/daftarlogo.png')}}" alt="logo" width="100%">
+                    <img class="widget-pict2" src="{{ URL('assets/images/lab.png')}}" alt="logo" width="100%">
                 </div>
 
-                <h3>Daftar Pasien</h3>
-                <a href="{{ URL('/laboran')}}" class="loogo">cek-></a>
+                <h3>Hasil laboratorium</h3>
+                <a href="{{ URL('/sisi/pasien')}}" class="loogo">cek-></a>
             </div>
         </div>
-
-        <div class="text-center2">
-            <div class="widget3">
-                <div>
-                    <img class="widget-pict3" src="{{ URL('assets/images/uploadlogo.png')}}" alt="logo" width="80">
-                </div>
-                <br />
-                <h3>Upload<br />Hasil</h3>
-                <a href="{{ URL('/sisi/laboran')}}" class="loogo">cek-></a>
-            </div>
-        </div>
-        </div>
-
-
     </section>
-
 </body>
 
 </html>

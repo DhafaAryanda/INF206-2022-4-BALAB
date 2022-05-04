@@ -44,7 +44,7 @@
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
             <div class="button">
-                <a href="{{ URL('/laboran') }}" class="btn btn-primary">Masuk</a>
+                <a href="{{ URL('/Home/laboran') }}" class="btn btn-primary">Masuk</a>
             </div>
             <div class="button1"> <br>
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>

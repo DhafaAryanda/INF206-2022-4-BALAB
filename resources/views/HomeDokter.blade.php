@@ -42,7 +42,7 @@
                         </ul>
                     </div>
                         <div class="button">
-                            <button type="button" class="btn btn-danger">Logout</button>
+                            <a href="{{ URL('/dokter/login')}}" class="btn btn-danger">Logout</a>
                         </div>
                 </div>
             </nav>
