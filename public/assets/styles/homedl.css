@@ -12,6 +12,11 @@
     float: left;
 }
 
+.container-fluid .button{
+    float: right;
+    transform: translateX(570%);
+}
+
 .info-panel {
     background-color: #fff;
     border-radius: 30px;
