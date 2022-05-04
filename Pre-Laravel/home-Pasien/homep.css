@@ -1,8 +1,8 @@
-.home-dl {
+.home-p {
     height: 1000px;
-    background: url(../images/bg11.png);
+    background: url(bg11.png);
     background-repeat: no repeat;
-    background-size: cover;
+    background-size:cover;
     position: relative;
 }
 
@@ -35,18 +35,9 @@
     top: 10px;
     float: center;
     width: 255px;
-    height: 200px;
+    height: 300px;
     padding-left: 20px;
     transform: translateY(15%);
-}
-
-.text-center2 {
-    top: 10px;
-    float: center;
-    width: 255px;
-    height: 200px;
-    padding-left: 20px;
-    transform: translateX(145%);
 }
 
 .widget-pict {
@@ -54,16 +45,12 @@
 }
 
 .widget-pict2 {
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.widget-pict3 {
-    border-radius: 5px;
-}
-
-.sidebar .widget {
+.sidebar .widget{
     padding: 30px;
-    margin: 0 0 25px;
+    margin:0 0 25px;
     background: #fff;
     border-bottom: 2px solid #fff;
     transition: all 0.5s ease;
@@ -72,28 +59,15 @@
     transform: translateX(-40%);
 }
 
-.text-center .widget2 {
-    padding: 50px;
-    margin: 0 0 25px;
+.text-center .widget2{
+    padding: 35px;
+    margin:0 0 25px;
     background: #fff;
     border-bottom: 2px solid #fff;
     transition: all 0.5s ease;
     border-radius: 15px;
     border: 1px solid rgba(32, 122, 218, 0.55);
-    transform: translateX(270%);
-}
-
-.text-center2 .widget3 {
-    padding: 50px;
-    margin-left: 20px;
-    margin: 0 0 25px;
-    background: #fff;
-    border-bottom: 2px solid #fff;
-    transition: all 0.5s ease;
-    border-radius: 15px;
-    border: 1px solid rgba(32, 122, 218, 0.55);
-    transform: translateY(-60%);
-    text-align: center;
+    transform: translateX(200%);
 }
 
 .sidebar .widget:hover {
@@ -106,31 +80,18 @@
     box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
 }
 
-.text-center2 .widget3:hover {
-    border-bottom: 4px solid #db3434;
-    box-shadow: 5px 5px 5px 0px rgba(148, 137, 137, 0.55);
-}
-
-.sidebar .widget h2 {
+.sidebar .widget h2{
     padding: 0;
-    margin: 0 0 15px;
+    margin:0 0 15px;
     color: #3498db;
     font-size: 15px;
     font-weight: 800;
     text-transform: uppercase;
 }
 
-.text-center .widget2 h3 {
+.text-center .widget2 h3{
     padding: 0;
-    margin: 0 0 15px;
-    color: #000000;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-.text-center2 .widget3 h3 {
-    padding: 0;
-    margin: 0 0 15px;
+    margin:0 0 15px;
     color: #000000;
     font-size: 15px;
     font-weight: 800;
@@ -144,29 +105,18 @@
     margin: 0;
 }
 
-.widget .faq-selengkapnya {
+.widget .faq-selengkapnya{
     color: #000;
     transition: all 0.5s ease;
     text-decoration: none;
     font-weight: 700;
 }
 
-.widget2 .loogo {
+.widget2 .loogo{
     color: #000;
     transition: all 0.5s ease;
     text-decoration: none;
     font-weight: 700;
-}
-
-.widget3 .loogo {
-    color: #000;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.text-center2 .widget3 h3 {
-    text-align: center;
 }
 
 .faq-selengkapnya:hover {
@@ -177,7 +127,7 @@
     margin-left: 10px;
 }
 
-.col-lg p {
+.col-lg p{
     color: #000;
     transition: all 0.5s ease;
     text-decoration: none;
@@ -187,6 +137,7 @@
 .navbar-nav {
     float: right;
     margin-right: -25px;
+    
 }
 
 .navbar-nav a {

@@ -41,6 +41,9 @@
                             </li>
                         </ul>
                     </div>
+                        <div class="button">
+                            <button type="button" class="btn btn-danger">Logout</button>
+                        </div>
                 </div>
             </nav>
         </div>
@@ -84,7 +87,7 @@
         <aside class="sidebar">
             <div class="widget">
                 <div>
-                    <img class="widget-pict" src="{{ URL('tips2.png')}}" alt="pict" width="100%">
+                    <img class="widget-pict" src="{{ URL('assets/images/tips2.png')}}" alt="pict" width="100%">
                 </div>
 
                 <h2>Info</h2>

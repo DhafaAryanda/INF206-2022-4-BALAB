@@ -41,6 +41,9 @@
                             </li>
                         </ul>
                     </div>
+                        <div class="button">
+                            <button type="button" class="btn btn-danger">Logout</button>
+                        </div>
                 </div>
             </nav>
         </div>
