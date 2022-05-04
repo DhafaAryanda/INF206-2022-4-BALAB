@@ -47,7 +47,7 @@
                 <a href="{{ URL('/sisi/dokter') }}" class="btn btn-primary">Masuk</a>
             </div>
             <div class="button1"> <br>
-                <a href="{{ URL('laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
             <div class="button2">
                 <a href="{{ URL('/login/pasien') }}" class="btn btn-dark" role="button">Masuk sebagai pasien</button>
