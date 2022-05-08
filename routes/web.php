@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\laborancontroller;
 use Illuminate\Support\Facades\Route;
+use App\Models\pasien;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +23,8 @@ Route::get('/laboran/login', function () {
     return view('login_laboran');
 });
 
-Route::get('/laboran', function () {
-    return view('table-pasien');
-});
+Route::get('/laboran', [laborancontroller::class, 'index']);
+Route::post('/laboran', [laborancontroller::class, 'store']);
 
 Route::get('/data/pasien', function () {
     return view('input_data_laboran');
