@@ -25,7 +25,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{ URL('/Home/laboran')}}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="container-fluid">
                         <a class="navbar-brand"></a>
-                        <form class="d-flex" style="width: 300px; margin-left: 490px; top:-20;">
+                        <form class="d-flex" style="width: 300px; margin-left: 350px; top:-20;">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-dark" type="submit">Search</button>
                         </form>
