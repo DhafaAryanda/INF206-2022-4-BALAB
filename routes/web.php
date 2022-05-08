@@ -64,3 +64,39 @@ Route::get('/bantuan', function () {
 Route::get('/tambah', function () {
     return view('Tambah_pasien');
 });
+
+Route::get('/profil/dokter', function () {
+    return view('profil_dokter');
+});
+
+Route::get('/profil/laboran', function () {
+    return view('profil_laboran');
+});
+
+Route::get('/Home/laboran', function () {
+    return view('HomeLaboran');
+});
+
+Route::get('/Home/dokter', function () {
+    return view('HomeDokter');
+});
+
+Route::get('/Bantuan/laboran', function () {
+    return view('bantuan_laboran');
+});
+
+Route::get('/Bantuan/dokter', function () {
+    return view('bantuan_dokter');
+});
+
+Route::get('/Tentang/laboran', function () {
+    return view('tentang_laboran');
+});
+
+Route::get('/Home/pasien', function () {
+    return view('HomePasien');
+});
+
+Route::get('/Profil/pasien', function () {
+    return view('profil_pasien');
+});

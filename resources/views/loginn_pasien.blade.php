@@ -43,7 +43,7 @@
                 <label class="form-check-label" for="exampleCheck1">ingat saya</label>
             </div>
             <div class="button">
-                <a href="{{ URL('/sisi/pasien') }}" class="btn btn-primary">Masuk</a>
+                <a href="{{ URL('/Home/pasien') }}" class="btn btn-primary">Masuk</a>
             </div>
             <div class="form-text">Lupa kata sandi?</div>
             </div>

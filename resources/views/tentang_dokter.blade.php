@@ -23,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ URL('/Home/pasien')}}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/Profil/pasien')}}">Profil</a>
+                            <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
+                            <a class="nav-link" href="{{ URL('/Bantuan/dokter') }}">Bantuan</a>
                         </li>
                     </ul>
                 </div>
