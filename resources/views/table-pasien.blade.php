@@ -86,62 +86,17 @@
                             </tr>
                         </thead>
                         <tbody class="table-primary text-center">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Siti Aisyah</td>
-                                <td>11 Februari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Dilan</td>
-                                <td>26 Januari 2022</td>
-                                <td>
-                                    <a href="{{ URL('/sisi/laboran') }}">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Abidzar</td>
-                                <td>19 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Sulaiman Daud</td>
-                                <td>14 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Sahlan</td>
-                                <td>14 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Muzanni</td>
-                                <td>11 Januari 2022</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Siti Aminah</td>
-                                <td>11 Januari 2021</td>
-                                <td>
-                                    <a href=" ">Detail</a>
-                                </td>
-                            </tr>
+                            <php? $i=1; ?>
+                                @foreach($post as $p)
+                                <tr>
+                                    <th scope="row">{{$loop -> iteration}}</th>
+                                    <td>{{$p -> nama}}</td>
+                                    <td>{{$p -> tanggal_periksa}}</td>
+                                    <td>
+                                        <a href=" ">Detail</a>
+                                    </td>
+                                </tr>
+                                @endforeach
                         </tbody>
                     </table>
                     <div class="container-fluid" style="margin-left: 330px;">
@@ -161,20 +116,21 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form>
+                                            <form action="/laboran" method="post">
+                                                @csrf
                                                 <div>
                                                     <label for="nama" class="form-label">Nama</label>
-                                                    <input type="text" class="form-control" id="nama">
+                                                    <input type="text" class="form-control" id="nama" name="nama">
                                                 </div>
                                                 <div>
                                                     <label for="tanggal" class="form-label">Tanggal Periksa</label>
-                                                    <input type="date" class="form-control" id="tanggal">
+                                                    <input type="text" class="form-control" id="tanggal" name="tanggal_periksa">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>
+                                                    <button href="{{ URL('/laboran')}}" class="btn btn-primary">Simpan</button>
                                                 </div>
                                             </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>
-                                            <button type="button" class="btn btn-primary">Simpan</button>
                                         </div>
                                     </div>
                                 </div>
