@@ -17,7 +17,7 @@ use App\Models\pasien;
 */
 
 Route::get('/dokter/login', [Logincontroller::class, 'index']);
-Route::post('/dokter/login', [Logincontroller::class, 'Authenticated']);
+Route::post('/dokter/login', [Logincontroller::class, 'Authenticate']);
 
 Route::get('/laboran/login', function () {
     return view('login_laboran');
