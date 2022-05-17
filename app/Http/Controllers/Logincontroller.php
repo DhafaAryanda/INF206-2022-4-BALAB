@@ -13,17 +13,20 @@ class Logincontroller extends Controller
         return view('login_dokter');
     }
 
-    public function authenticated(Request $request)
+    public function authenticate(Request $request)
     {
-        $credentials = $request -> validate([
-            'email' => 'required|email:dns',
-            'password' => 'required|min:5:max:255'
+        
+        $credential = $request -> validate([
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
+        // return Auth::attempt($credential);
+        // return "berhasil";
 
-        if(Auth::attempt($credentials)){
+        if(Auth::attempt($credential)){
             $request->session()->regenerate();
 
-            return redirect()->intended('/Homedokter');
+            return redirect()->intended('/Home/dokter');
         }
 
         return back()->with('error', 'Email atau password salah');

@@ -28,29 +28,30 @@
                     </div>
                 </nav>
             </div>
-            <form class="form">
+            <form action="/daftar/akun/pasien" method="post">
+                @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputUsername1" class="form-label">Username</label>
-                    <input type="username" class="form-control" id="exampleInputUsername1">
+                    <input type="username" class="form-control @error('username') is-invalid @enderror" id="exampleInputUsername1" name="username">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputID1" class="form-label">ID pasien</label>
-                    <input type="ID" class="form-control" id="exampleInputID1">
+                    <input type="ID" class="form-control" id="exampleInputID1" name="id_pasien">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                 </div>
                 <div class="button">
-                    <a href="{{ URL('/login/pasien') }}" class="btn btn-primary" button style="background-color:green">Daftar</a>
+                    <a href="" class="btn btn-primary" button style="background-color:green">Daftar</a>
                 </div>
             </form>
         </section>
