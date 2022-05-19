@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('pasiens', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->string('nama');
             $table->string('tanggal_periksa');
             $table->timestamps();

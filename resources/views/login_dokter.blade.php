@@ -28,12 +28,27 @@
                 </div>
             </nav>
         </div>
+<<<<<<< HEAD
 
+=======
+        @if(session()->has("error"))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{session('error')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                
+            </button>
+            </div>
+        @endif
+>>>>>>> main
         <form class="form" action="/dokter/login" method="post">
             @csrf
             <div class="mb-3">
                 <label name="email" for="email" class="form-label">Email address</label>
+<<<<<<< HEAD
                 <input type="email" class="form-control" id="email" @error('email') is-invalid @enderror aria-describedby="emailHelp" autofocus required>
+=======
+                <input name="email" type="email" class="form-control  @error('email') is-invalid @enderror " id="email "aria-describedby="emailHelp" autofocus required>
+>>>>>>> main
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 @error('email')
                 <div class="invalid-feedback">
@@ -48,15 +63,19 @@
             @endif
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
+<<<<<<< HEAD
                 <input type="password" class="form-control" id="password" required>
+=======
+                <input name="password" type="password" class="form-control" id="password" required>
+>>>>>>> main
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
-            <div class="button">
-                <a href="{{ URL('/Home/dokter') }}" class="btn btn-primary">Masuk</a>
-            </div>
+            <button class="btn btn-primary" type="submit">
+                 Masuk
+            </button>
             <div class="button1"> <br>
                 <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
