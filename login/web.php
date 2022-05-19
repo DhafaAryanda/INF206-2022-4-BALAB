@@ -1,10 +1,6 @@
 <?php
 
 use App\Http\Controllers\laborancontroller;
-<<<<<<< HEAD
-=======
-use App\Http\Controllers\RegisterController;
->>>>>>> main
 use App\Http\Controllers\Logincontroller;
 use Illuminate\Support\Facades\Route;
 use App\Models\pasien;
@@ -20,16 +16,8 @@ use App\Models\pasien;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/dokter/login', [Logincontroller::class, 'index']);
-Route::post('/dokter/login', [Logincontroller::class, 'Authenticated']);
-=======
-Route::get('/dokter/login', function () {
-    return view('login_dokter');
-});
-Route::post('/dokter/login', [Logincontroller::class, 'authenticate']);
-
->>>>>>> main
+Route::post('/dokter/login', [Logincontroller::class, 'Authenticate']);
 
 Route::get('/laboran/login', function () {
     return view('login_laboran');

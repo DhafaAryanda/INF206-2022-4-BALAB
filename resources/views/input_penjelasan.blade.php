@@ -123,9 +123,9 @@
             <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
             <div class="form-floating ms-auto md-5">
                 <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
-                <label for="floatingTextarea" style="margin-left: 13rem">Comments</label>
+                <label for="floatingTextarea" style="margin-left: 7.5rem">Comments</label>
             </div><br>
-            <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 60rem;">Kirim</button>
+            <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 54rem;">Kirim</button>
         </section><br>
     </section>
     <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
