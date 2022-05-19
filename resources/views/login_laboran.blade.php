@@ -29,7 +29,7 @@
             </nav>
         </div>
 
-        <form class="form">
+        <form class="form" method="post" action ="/laboran/login">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -43,9 +43,8 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
-            <div class="button">
-                <a href="{{ URL('/Home/laboran') }}" class="btn btn-primary">Masuk</a>
-            </div>
+            <button class="btn btn-primary" type="submit">Masuk</button>
+    
             <div class="button1"> <br>
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>
             </div> <br>
