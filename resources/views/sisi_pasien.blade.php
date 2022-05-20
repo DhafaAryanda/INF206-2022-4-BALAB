@@ -27,10 +27,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ URL('/Home/pasien') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
+                        <a class="nav-link" href="{{ URL('/Profil/pasien')}}">Profil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
@@ -49,9 +49,7 @@
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
-                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
-                                <br>
-                                <a href="{{ URL('/login/pasien') }}" class="btn-danger fw-bold ms-5 btn-sm fs-6" style="width: 6rem">keluar</a>
+                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="100" class="rounded-circle ms-5 mt-3">
                             </div>
                             <div class="col">
                                 <p></p>
