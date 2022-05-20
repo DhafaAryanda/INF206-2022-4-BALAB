@@ -1,0 +1,44 @@
+.login-dokter {
+    height: 800px;
+    background: url(../images/background.png);
+    background-size: cover;
+    position: relative;
+}
+
+.login-dokter form {
+    position: absolute;
+    width: 400px;
+    height: 460px;
+    left: 95px;
+    top: 200px;
+    background: rgba(230, 230, 230, 0.82);
+    border-radius: 15px;
+}
+
+.container {
+    width: 0;
+    margin-bottom: 200px;
+    float: left;
+}
+
+.form {
+    padding: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.button1 {
+    text-align: center;
+    align-items: center;
+}
+
+.button2 {
+    text-align: center;
+    align-items: center;
+}
