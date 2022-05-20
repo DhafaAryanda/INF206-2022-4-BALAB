@@ -25,50 +25,49 @@
                         <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Hubungi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tentang</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </div>
-
-        <form class="form">
+        @if(session()->has("error"))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{session('error')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                
+            </button>
+            </div>
+        @endif
+        <form class="form" method="post" action ="/laboran/login">
+            @csrf
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label name="email" for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"  aria-describedby="emailHelp" autofocus required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="password" required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
-            <div class="button">
-                <button type="submit" class="btn btn-primary me-5">Submit</button>
-                <button type="submit" class="btn btn-primary ms-5">Daftar akun</button></div>
-            </div>
+            <button class="btn btn-primary" type="submit" style="margin-left: 9rem;">
+                Masuk
+            </button>
             <div class="button1"> <br>
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>
             </div> <br>
             <div class="button2">
-                <button type="submit" class="btn btn-dark">Masuk sebagai pasien</button>
+                <a href="{{ URL('/login/pasien') }}" class="btn btn-dark" role="button">Masuk sebagai pasien</a>
             </div>
         </form>
     </section>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>

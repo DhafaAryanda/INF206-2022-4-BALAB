@@ -25,6 +25,9 @@ return new class extends Migration
             $table->string('noHP')->nullable();
             $table->string('tglLahir')->nullable();
             $table->string('uploadGambar')->nullable();
+            $table->foreignId('user_id');
+            $table->string('nama');
+            $table->string('tanggal_periksa');
             $table->timestamps();
         });
     }

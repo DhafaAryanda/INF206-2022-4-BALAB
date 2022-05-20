@@ -27,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ URL('/Home/pasien') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
+                        <a class="nav-link" href="{{ URL('/Profil/pasien')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubungi</a>
+                        <a class="nav-link" href="{{ URL('/bantuan') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="{{ URL('/tentang/kami') }}">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -49,9 +49,7 @@
                     <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(231, 223, 223, 0.603);">
                         <div class="row fw-bold">
                             <div class="col">
-                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="80" class="rounded-circle ms-5 mt-3">
-                                <br>
-                                <button type="button" class="btn-danger fw-bold mt-2 ms-5 btn-sm" style="width: 5rem;">keluar</button>
+                                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" width="100" class="rounded-circle ms-5 mt-3">
                             </div>
                             <div class="col">
                                 <p></p>
@@ -128,7 +126,7 @@
         </selection>
     </section>
         <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
-            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p></b>
+            <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6285213345327"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>085213345327</p></b>
         </footer>
     </section>
     </body>
