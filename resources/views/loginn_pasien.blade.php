@@ -25,53 +25,48 @@
                             <span class="navbar-toggler-icon"></span>
                             </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tentang</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Bantuan</a>
-                                </li>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </div>
 
-        <form class="form">
+        <form class="form" method="post"action="/login/pasien">
+            @csrf
+             @if(session()->has('success'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{session('success')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="mb-3">
-                <label for="exampleInputID1" class="form-label">ID pasien</label>
-                <input type="ID" class="form-control" id="exampleInputID1">
+                <label for="exampleInputID1" class="form-label">Nomor BPJS</label>
+                <input type="text" class="form-control" id="exampleInputID1" name="noBPJS">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">ingat saya</label>
             </div>
-            <div class="button">
-                <button type="submit" class="btn btn-primary">Masuk</button>
-            </div>
+            <button class="btn btn-primary" style="margin-left: 9.2rem;"> Masuk
+                <!-- <a href="{{ URL('/Home/pasien') }}" class="btn btn-primary">Masuk</a> -->
+            </button>
             <div class="form-text">Lupa kata sandi?</div>
             </div>
             <div class="button">
-                <button type="submit" class="btn btn-primary" button style="background-color:green">Daftar Akun</button>
+                <a href="{{ URL('/daftar/akun/pasien') }}" class="btn btn-primary" button style="background-color:green">Daftar Akun</a>
             </div>
             <div class="button1"> <br>
-                <button type="submit" class="btn btn-success">Masuk sebagai laboran</button>
+                <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
             <div class="button2">
-                <button type="submit" class="btn btn-dark">Masuk sebagai dokter</button>
+                <a href="{{ URL('/dokter/login') }}" class="btn btn-dark"role="button">Masuk sebagai dokter</a>
             </div>
         </form>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- @dd(request()) -->
 </body>
 
 </html>

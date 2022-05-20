@@ -7,20 +7,24 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\dataPasien;
+use App\Models\Dokter;
+use App\Models\Laboran;
+use App\Models\Pasien;
+
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
+    protected $guarded = [
+        'id'
     ];
 
     /**
@@ -41,4 +45,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function dataPasien(){
+        return $this->hasMany(dataPasien::class);
+    }
+    public function dokter(){
+        return $this->hasOne(Dokter::class);
+    }
+    public function laboran(){
+        return $this->hasOne(Laboran::class);
+    }
+    public function pasien(){
+        return $this->hasOne(Pasien::class);
+    }
+
 }
