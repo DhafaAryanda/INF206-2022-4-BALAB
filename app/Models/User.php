@@ -27,7 +27,6 @@ class User extends Authenticatable
         'id'
     ];
 
-    
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -60,5 +59,4 @@ class User extends Authenticatable
         return $this->hasOne(Pasien::class);
     }
 
-    
 }
