@@ -38,10 +38,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ URL('/tentang/kami')}}">Tentang</a>
                             </li>
+                            <li class="nav-item">
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type="submit"  class="btn btn-danger" style="margin-left: 27rem; margin-bottom: -3rem;">
+                                            Logout
+                                    </button>
+                                </form>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="button">
-                        <a href="{{ URL('/login/pasien')}}" class="btn btn-danger">Logout</a>
                     </div>
                 </div>
             </nav>
@@ -102,7 +107,7 @@
                 </div>
 
                 <h3>Hasil laboratorium</h3>
-                <a href="{{ URL('/sisi/pasien')}}" class="loogo">cek-></a>
+                <a href="{{ URL('/sisi/pasien')}}" class="logo">cek-></a>
             </div>
         </div>
     </section>

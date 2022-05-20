@@ -33,13 +33,13 @@
                             <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ URL('/sisi/dokter') }}">Daftar Pasien</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ URL('/bantuan')}}">Bantuan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ URL('/Tentang/dokter') }}">Tentang</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/sisi/dokter') }}">Daftar Pasien</a>
                         </li>
                     </ul>
                 </div>
@@ -121,9 +121,9 @@
                 </div>
             </div><br>
             <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
-            <div class="form-floating ms-auto md-5">
+            <div class="form-floating" style="margin-left: -5.8rem;">
                 <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
-                <label for="floatingTextarea" style="margin-left: 7.5rem">Comments</label>
+                <label for="floatingTextarea" style="margin-left: 13rem">Comments</label>
             </div><br>
             <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 54rem;">Kirim</button>
         </section><br>
