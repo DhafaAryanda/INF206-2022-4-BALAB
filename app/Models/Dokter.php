@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
 use App\Models\dataPasien;
+use App\Models\User;
 
-class pasien extends Model
+class Dokter extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
     public function dataPasien(){
-        return $this->hasMany(dataPasien::class);
+        return $this->hasOne(dataPasien::class);
     }
     public function user(){
         return $this->belongsTo(User::class);
