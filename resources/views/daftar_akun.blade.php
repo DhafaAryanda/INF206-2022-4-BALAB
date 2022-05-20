@@ -28,19 +28,21 @@
                     </div>
                 </nav>
             </div>
+            
+            
             <form action="/daftar/akun/pasien" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+                    <label for="exampleInputEmail1" class="form-label">No BPJS Pasien</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="noBPJS">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputUsername1" class="form-label">Username</label>
-                    <input type="username" class="form-control @error('username') is-invalid @enderror" id="exampleInputUsername1" name="username">
+                    <input type="username" class="form-control" value="{{ old ('name')}}" id="exampleInputUsername1" name="name">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputID1" class="form-label">ID pasien</label>
-                    <input type="ID" class="form-control" id="exampleInputID1" name="id_pasien">
+                    <label for="exampleInputID1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputID1" name="email">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -50,10 +52,9 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Ingat saya</label>
                 </div>
-                <div class="button">
-                    <a href="" class="btn btn-primary" button style="background-color:green">Daftar</a>
-                </div>
+                <button class="btn btn-primary " style="background-color:green">Daftar</button>
             </form>
+           
         </section>
     </body>
 </html>
