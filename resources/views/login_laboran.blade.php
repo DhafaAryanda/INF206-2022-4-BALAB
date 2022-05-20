@@ -28,23 +28,37 @@
                 </div>
             </nav>
         </div>
-
+        @if(session()->has("error"))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{session('error')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                
+            </button>
+            </div>
+        @endif
         <form class="form" method="post" action ="/laboran/login">
+            @csrf
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label name="email" for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"  aria-describedby="emailHelp" autofocus required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="password" required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
-            <button class="btn btn-primary" type="submit">Masuk</button>
-    
+            <button class="btn btn-primary" type="submit" style="margin-left: 9rem;">
+                Masuk
+            </button>
             <div class="button1"> <br>
                 <a href="{{ URL('/dokter/login') }}" class="btn btn-success" role="button">Masuk sebagai dokter</a><br>
             </div> <br>

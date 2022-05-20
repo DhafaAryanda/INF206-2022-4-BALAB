@@ -56,7 +56,7 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Ingatkan saya</label>
             </div>
-            <button class="btn btn-primary" type="submit">
+            <button class="btn btn-primary" type="submit" style="margin-left: 9rem;">
                  Masuk
             </button>
             <div class="button1"> <br>

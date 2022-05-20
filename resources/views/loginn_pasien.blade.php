@@ -29,22 +29,29 @@
             </nav>
         </div>
 
-        <form class="form">
+        <form class="form" method="post"action="/login/pasien">
+            @csrf
+             @if(session()->has('success'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{session('success')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="mb-3">
-                <label for="exampleInputID1" class="form-label">ID pasien</label>
-                <input type="ID" class="form-control" id="exampleInputID1">
+                <label for="exampleInputID1" class="form-label">Nomor BPJS</label>
+                <input type="text" class="form-control" id="exampleInputID1" name="noBPJS">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">ingat saya</label>
             </div>
-            <div class="button">
-                <a href="{{ URL('/Home/pasien') }}" class="btn btn-primary">Masuk</a>
-            </div>
+            <button class="btn btn-primary" style="margin-left: 9.2rem;"> Masuk
+                <!-- <a href="{{ URL('/Home/pasien') }}" class="btn btn-primary">Masuk</a> -->
+            </button>
             <div class="form-text">Lupa kata sandi?</div>
             </div>
             <div class="button">
@@ -59,6 +66,7 @@
         </form>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- @dd(request()) -->
 </body>
 
 </html>

@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\dataPasien;
+use App\Models\Dokter;
+use App\Models\Laboran;
 use App\Models\Pasien;
+
 
 class User extends Authenticatable
 {
@@ -42,7 +46,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function pasien(){
-        return $this->hasMany(pasien::class);
+    public function dataPasien(){
+        return $this->hasMany(dataPasien::class);
     }
+    public function dokter(){
+        return $this->hasOne(Dokter::class);
+    }
+    public function laboran(){
+        return $this->hasOne(Laboran::class);
+    }
+    public function pasien(){
+        return $this->hasOne(Pasien::class);
+    }
+
+    
 }
