@@ -70,4 +70,5 @@
     <script src="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.min.js')}}"></script>
 </body>
 
+
 </html>

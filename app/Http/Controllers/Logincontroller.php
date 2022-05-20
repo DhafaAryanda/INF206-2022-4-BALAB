@@ -75,4 +75,5 @@ class Logincontroller extends Controller
 
         return back()->with('error', 'Email atau password salah');
     }
+    
 }
