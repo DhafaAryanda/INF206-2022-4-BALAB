@@ -56,11 +56,11 @@ Route::get('/sisi/pasien', function () {
     return view('sisi_pasien');//output hasil laboran
 })->middleware('auth');
 
-Route::get('/login/pasien', [Logincontroller::class, 'index3']);
-Route::post('/login/pasien', [Logincontroller::class, 'authenticate3']);
+Route::get('/login/pasien', [App\Http\Controllers\Logincontroller::class, 'index3']);
+Route::post('/login/pasien', [App\Http\Controllers\Logincontroller::class, 'authenticate3']);
 
-Route::get('/daftar/akun/pasien', [LoginPasienController::class, 'index'])->middleware('guest');
- Route::post('/daftar/akun/pasien', [LoginPasienController::class, 'store']);
+Route::get('/daftar/akun/pasien', [App\Http\Controllers\LoginPasienController::class, 'index'])->middleware('guest');
+ Route::post('/daftar/akun/pasien', [App\Http\Controllers\LoginPasienController::class, 'store']);
 
 
 Route::get('/sisi/laboran', function () {

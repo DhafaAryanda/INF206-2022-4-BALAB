@@ -164,7 +164,7 @@
                         <!-- Form Group (username)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputUsername">Username</label>
-                            <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Masukkan username" @if($post[0]->pasien)
+                            <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Masukkan username" style="width: 42.5rem;" @if($post[0]->pasien)
                             value="{{$post[0]->pasien->nama}}"
                             @else value="{{$post[0]->name}}"
                             @endif>
@@ -174,44 +174,61 @@
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputFirstName">Nama awal</label>
-                                <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal Anda">
+                                <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal Anda" @if($post[0]->pasien)
+                                value="{{$post[0]->pasien->namaAwal}}"
+                                @else value="{{$post[0]->namaAwal}}"
+                                @endif>
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLastName">Nama akhir</label>
-                                <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir Anda">
+                                <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir Anda" style="width: 20.7rem;" @if($post[0]->pasien)
+                                value="{{$post[0]->pasien->namaAkhir}}"
+                                @else value="{{$post[0]->namaAkhir}}"
+                                @endif>
                             </div>
                         </div>
-                        <!-- Form Row        -->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <select name="statusPelayanan" class="form-select" aria-label="Default select example">
-                                <option selected>Pilih status pelayanan</option>
-                                <option value="1">Rawat Jalan</option>
-                                <option value="2">Rawat Inap</option>
-                            </select>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation">Lokasi</label>
-                                <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi Anda">
-                            </div>
+                        <!-- Form Group (Status Pelayanan)-->
+                        <div class="col-md-6">
+                                <label class="small mb-1" for="inputstatuspelayanan">Status Pelayanan</label>
+                                <input name="statusPelayanan" class="form-control" id="inputstatuspelayanan" type="text" placeholder="Masukkan status pelayanan" style="width: 42.5rem;" @if($post[0]->pasien)
+                                value="{{$post[0]->pasien->statusPelayanan}}"
+                                @else value="{{$post[0]->statusPelayanan}}"
+                                @endif>
+                        </div>
+                        <!-- Form Group (location)-->
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLocation">Lokasi</label>
+                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi Anda" style="width: 42.5rem;" @if($post[0]->pasien)
+                            value="{{$post[0]->pasien->lokasi}}"
+                            @else value="{{$post[0]->lokasi}}"
+                            @endif>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email</label>
-                            <input name="email" class="form-control" id="inputEmailAddress" type="email" placeholder="Masukkan email Anda">
+                            <input name="email" class="form-control" id="inputEmailAddress" type="email" placeholder="Masukkan email Anda" @if($post[0]->pasien)
+                            value="{{$post[0]->pasien->email}}"
+                            @else value="{{$post[0]->email}}"
+                            @endif>
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (phone number)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputPhone">Nomor HP</label>
-                                <input name="noHP" class="form-control" id="inputPhone" type="tel" placeholder="Masukkan nomor hp">
+                                <input name="noHP" class="form-control" id="inputPhone" type="tel" placeholder="Masukkan nomor hp" @if($post[0]->pasien)
+                                value="{{$post[0]->pasien->noHP}}"
+                                @else value="{{$post[0]->noHP}}"
+                                @endif>
                             </div>
                             <!-- Form Group (birthday)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputBirthday">Tanggal lahir</label>
-                                <input name="tglLahir" class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Masukkan tanggal lahir Anda">
+                                <input name="tglLahir" class="form-control" id="inputBirthday" type="date" name="birthday" placeholder="Masukkan tanggal lahir Anda" @if($post[0]->pasien)
+                                value="{{$post[0]->pasien->tglLahir}}"
+                                @else value="{{$post[0]->tglLahir}"
+                                @endif>
                             </div>
                         </div>
                         <!-- Save changes button-->
