@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\pasien;
+use App\Models\User;
 
 
 class laborancontroller extends Controller
