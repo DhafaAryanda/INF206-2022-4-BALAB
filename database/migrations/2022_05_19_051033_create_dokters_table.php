@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('namaAkhir')->nullable();
             $table->string('organisasi')->nullable();
             $table->string('lokasi')->nullable();
-            $table->string('noHP')->nullable();
+            $table->bigInteger('noHP')->nullable();
             $table->date('tglLahir')->nullable();
             $table->string('uploadGambar')->nullable();
             $table->timestamps();
