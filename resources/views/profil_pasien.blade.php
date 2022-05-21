@@ -19,7 +19,7 @@
             background-repeat: no-repeat;
         }
 
-        <style>input[type=text],
+        input[type=text],
         textarea {
             width: 95%;
             padding: 7px;
