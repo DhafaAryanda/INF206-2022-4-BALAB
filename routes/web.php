@@ -3,14 +3,17 @@
 use App\Http\Controllers\laborancontroller;
 // use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Logincontroller;
-use App\Http\Controllers\LoginPasiencontroller;
-use App\Http\Controllers\pasiencontroller;
-use App\Http\Controllers\doktercontroller;
+use App\Http\Controllers\LoginPasienController;
+use App\Http\Controllers\pasienController;
+use App\Http\Controllers\DokterController;
 use App\Http\Controllers\logoutController;
 // use App\Http\Controllers\laborancontroller;
 use Illuminate\Support\Facades\Route;
 use App\Models\pasien;
 use App\Models\Dokter;
+use App\Models\User;
+use App\Models\Laboran;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 /*
@@ -28,11 +31,11 @@ Route::get('/dokter/login', [App\Http\Controllers\Logincontroller::class, 'index
 Route::post('/dokter/login', [App\Http\Controllers\Logincontroller::class, 'authenticate1']);
 
 
-Route::get('/laboran/login', [App\Http\Controllers\Logincontroller::class, 'index2'])->middleware('guest');
-Route::post('/laboran/login', [App\Http\Controllers\Logincontroller::class, 'authenticate2']);
+Route::get('/laboran/login', [Logincontroller::class, 'index2'])->middleware('guest');
+Route::post('/laboran/login', [Logincontroller::class, 'authenticate2']);
 
-Route::get('/laboran', [App\Http\Controllers\laborancontroller::class, 'index'])->middleware('auth');
-Route::post('/laboran', [App\Http\Controllers\laborancontroller::class, 'store']);
+Route::get('/laboran', [laborancontroller::class, 'index'])->middleware('auth');
+Route::post('/laboran', [laborancontroller::class, 'store']);
 
 // Route::get('/data/pasien', function () {
 //     return view('input_data_laboran');
@@ -42,9 +45,9 @@ Route::get('/input/penjelasan', function () {
     return view('input_penjelasan');///dokter
 })->middleware('auth');
 
-Route::get('/sisi/dokter', [App\Http\Controllers\DokterController::class, 'index'])->middleware('auth');
+Route::get('/sisi/dokter', [DokterController::class, 'index'])->middleware('auth');
 
-Route::post('/sisi/dokter', [App\Http\Controllers\DokterController::class, 'store']);//input data pasien
+Route::post('/sisi/dokter', [DokterController::class, 'store']);//input data pasien
 
 
 Route::get('/tentang/kami', function () {
@@ -77,8 +80,8 @@ Route::get('/bantuan', function () {
 Route::get('/profil/dokter', [App\Http\Controllers\DokterController::class, 'indexProfil'])->middleware('auth');
 Route::post('/profil/dokter', [App\Http\Controllers\DokterController::class, 'storeProfil']);
 
-Route::get('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'indexProfil'])->middleware('auth');
-Route::post('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'storeProfil']);
+Route::get('/profil/laboran', [laborancontroller::class, 'indexProfil'])->middleware('auth');
+Route::post('/profil/laboran', [laborancontroller::class, 'storeProfil']);
 
 Route::get('/Home/laboran', function () {
     return view('HomeLaboran');
@@ -104,7 +107,7 @@ Route::get('/Home/pasien', function () {
     return view('HomePasien');
 })->middleware('auth');
 
-Route::get('/Profil/pasien', [App\Http\Controllers\pasienController::class, 'indexProfil'])->middleware('auth');;
+Route::get('/Profil/pasien', [pasienController::class, 'indexProfil'])->middleware('auth');;
 
-Route::post('/Profil/pasien', [App\Http\Controllers\pasienController::class, 'storeProfil']);
-Route::post('/logout', [App\Http\Controllers\logoutController::class, 'logout']);
+Route::post('/Profil/pasien', [pasienController::class, 'storeProfil']);
+Route::post('/logout', [logoutController::class, 'logout']);

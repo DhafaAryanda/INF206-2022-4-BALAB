@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/profil_laboran.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css')}}">
     <link href="{{ URL::asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -70,10 +73,8 @@
                     </span>
                     <input type="file" class="drop-zone__input" name="uploadGambar">
                 </div>
-                <!-- Profile picture help block-->
-                <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                 <!-- Profile picture upload button-->
-                <button class="btn btn-primary" type="button">Upload new image</button>
+                <button class="btn btn-primary" type="button" style="font-family: 'Ubuntu', sans-serif;">Upload new image</button>
             </div>
         </div>
     </div>
@@ -98,8 +99,8 @@
                     @csrf
                     <!-- Form Group (username)-->
                     <div class="mb-3">
-                        <label class="small mb-1" for="inputUsername">Username</label>
-                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Enter your username" @if($post[0]->laboran)
+                        <label class="small mb-1" for="inputUsername" style="font-family: 'Ubuntu', sans-serif;">Username</label>
+                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Enter your username" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                         value="{{$post[0]->laboran->nama}}"
                         @else value="{{$post[0]->name}}"
                         @endif >
@@ -108,48 +109,69 @@
                     <div class="row gx-3 mb-3">
                         <!-- Form Group (first name)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputFirstName">First name</label>
-                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value>
+                            <label class="small mb-1" for="inputFirstName" style="font-family: 'Ubuntu', sans-serif;">Nama Awal</label>
+                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->namaAwal}}"
+                            @else value="{{$post[0]->namaAwal}}"
+                            @endif>
                         </div>
                         <!-- Form Group (last name)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputLastName">Last name</label>
-                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Enter your last name">
+                            <label class="small mb-1" for="inputLastName" style="font-family: 'Ubuntu', sans-serif;">Nama Akhir</label>
+                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->namaAkhir}}"
+                            @else value="{{$post[0]->namaAkhir}}"
+                            @endif>
                         </div>
                     </div>
                     <!-- Form Row        -->
                     <div class="row gx-3 mb-3">
                         <!-- Form Group (organization name)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputOrgName">Organization name</label>
-                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name">
+                            <label class="small mb-1" for="inputOrgName" style="font-family: 'Ubuntu', sans-serif;">Rumah Sakit</label>
+                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Masukkan nama rumah sakit" style="width: 20.7rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->organisasi}}"
+                            @else value="{{$post[0]->organisasi}}"
+                            @endif>
                         </div>
                         <!-- Form Group (location)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputLocation">Location</label>
-                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Enter your location">
+                            <label class="small mb-1" for="inputLocation" style="font-family: 'Ubuntu', sans-serif;">Lokasi</label>
+                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->lokasi}"
+                            @else value="{{$post[0]->lokasi}}"
+                            @endif>
                         </div>
                     </div>
                     <!-- Form Group (email address)-->
                     <div class="mb-3">
-                        <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                        <input name="email" class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address">
+                        <label class="small mb-1" for="inputEmailAddress" style="font-family: 'Ubuntu', sans-serif;">Alamat email</label>
+                        <input name="email" class="form-control" id="inputEmailAddress" type="email" placeholder="Masukkan alamat email" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                        value="{{$post[0]->laboran->email}}"
+                        @else value="{{$post[0]->email}}"
+                        @endif>
                     </div>
                     <!-- Form Row-->
                     <div class="row gx-3 mb-3">
                         <!-- Form Group (phone number)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputPhone">Phone number</label>
-                            <input name="noHP" class="form-control" id="inputPhone" type="text" placeholder="Enter your phone number">
+                            <label class="small mb-1" for="inputPhone" style="font-family: 'Ubuntu', sans-serif;">Nomor HP</label>
+                            <input name="noHP" class="form-control" id="inputPhone" type="text" placeholder="Masukkan nomor HP" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->noHP}}"
+                            @else value="{{$post[0]->noHP}}"
+                            @endif>
                         </div>
                         <!-- Form Group (birthday)-->
                         <div class="col-md-6">
-                            <label class="small mb-1" for="inputBirthday">Birthday</label>
-                            <input name="tglLahir" class="form-control" id="inputBirthday" type="text" placeholder="Enter your birthday">
+                            <label class="small mb-1" for="inputBirthday" style="font-family: 'Ubuntu', sans-serif;">Tanggal lahir</label>
+                            <input name="tglLahir" class="form-control" id="inputBirthday" type="text" placeholder="Masukkan tanggal lahir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->tglLahir}}"
+                            @else value="{{$post[0]->tglLahir}}"
+                            @endif>
                         </div>
                     </div>
                     <!-- Save changes button-->
-                    <button class="btn btn-primary" type="submit">Save changes</button>
+                    <button class="btn btn-primary" type="submit" style="font-family: 'Ubuntu', sans-serif;">Save changes</button>
                 </form>
             </div>
         </div>
