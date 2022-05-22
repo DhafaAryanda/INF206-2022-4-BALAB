@@ -7,6 +7,7 @@ use App\Models\pasien;
 use App\Models\dataPasien;
 use App\Models\User;
 use App\Models\Laboran;
+use Illuminate\Support\Facades\DB;
 
 
 class laborancontroller extends Controller
@@ -58,7 +59,7 @@ class laborancontroller extends Controller
             $validateData['uploadGambar'] = $request->file('uploadGambar')->store('Gambar');
             //return $request->file('faskesPicture')->store('post-image');;
         }
-        
+
         //store
         try{
             if($laboran->contains(1)===false){

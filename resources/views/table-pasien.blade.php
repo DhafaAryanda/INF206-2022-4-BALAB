@@ -106,7 +106,7 @@
                                     <td>{{$p -> nama}}</td>
                                     <td>{{$p -> tglPeriksa}}</td>
                                     <td>
-                                        <a href=" ">Detail</a>
+                                        <a href="{{ URL('/sisi/pasien')}}">Detail</a>
                                     </td>
                                 </tr>
                                 @endforeach
