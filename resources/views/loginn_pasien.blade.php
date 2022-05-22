@@ -31,12 +31,6 @@
 
         <form class="form" method="post" action="/login/pasien">
             @csrf
-            @if(session()->has('success'))
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                {{session('success')}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
             <div class="mb-3">
                 <label for="exampleInputID1" class="form-label">Nomor BPJS</label>
                 <input type="text" class="form-control" id="exampleInputID1" name="noBPJS">
@@ -65,12 +59,12 @@
             </div>
         </form>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @if (session('login'))
+        @if (session('Success'))
         <script>
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Pendaftaran Berhasil!',
+                title: 'Login Berhasil!',
                 showConfirmButton: false,
                 timer: 1500,
             })
@@ -81,7 +75,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Login Gagal!',
-                text: 'Username atau Password Salah!',
+                text: 'Nomor BPJS atau Password Salah!',
                 showConfirmButton: false,
                 timer: 2000,
             })

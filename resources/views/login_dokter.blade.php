@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/dokter.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/styles/dokter.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +42,7 @@
         <form class="form" action="/dokter/login" method="post">
             @csrf
             <div class="mb-3">
-                <label name="email" for="email" class="form-label">Email address</label>
+                <label name="email" for="email" class="form-label" style="font-family: 'Ubuntu', sans-serif;">Email address</label>
                 <input name="email" type="email" class="form-control  @error('email') is-invalid @enderror " id="email " aria-describedby="emailHelp" autofocus required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 @error('email')
@@ -49,8 +52,8 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input name="password" type="password" class="form-control" id="password" required>
+                <label for="password" class="form-label" style="font-family: 'Ubuntu', sans-serif;">Password</label>
+                <input name="password" type="password" class="form-control" id="password" required style="font-family: 'Ubuntu', sans-serif;">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
