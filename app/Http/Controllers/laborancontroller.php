@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\pasien;
+use App\Models\dataPasien;
+use App\Models\User;
+use App\Models\Laboran;
+use Illuminate\Support\Facades\DB;
 
 
 class laborancontroller extends Controller
@@ -18,8 +22,16 @@ class laborancontroller extends Controller
             'nama' => 'required|max:255',
             'tglPeriksa' => 'required'
         ]); 
-        dataPasien::create($validateData);
-        return redirect('/laboran')->with('berhasil', 'Berhasil ditambahkan!');
+        $user= User::where('name',$request->nama)->get();
+        
+        if (Pasien::where('nama',$request->nama)==$request->nama){
+            $validateData["pasien_id"]= $user[0]->id;
+            $validateData["user_id"]= auth()->user()->id;
+            dataPasien::create($validateData);
+            return redirect('/sisi/dokter')->with('berhasil', 'Berhasil ditambahkan!');
+        }
+         // return "berhasil";
+         return redirect('/sisi/dokter')->with('gagal', 'Data tidak dapat ditammbahkan, Pasien tidak terdata');
     }
 
     public function indexProfil()
@@ -43,6 +55,11 @@ class laborancontroller extends Controller
         $validateData['user_id'] = auth()->user()->id;
         // return "yey";
         $laboran = DB::table('laborans')->where('user_id',Auth()->user()->id)->get();
+        if($request->file('uploadGambar')){
+            $validateData['uploadGambar'] = $request->file('uploadGambar')->store('Gambar');
+            //return $request->file('faskesPicture')->store('post-image');;
+        }
+
         //store
         try{
             if($laboran->contains(1)===false){
