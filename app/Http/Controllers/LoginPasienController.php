@@ -22,10 +22,10 @@ class LoginPasienController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'noBPJS' => 'required',
+            'noBPJS' => 'required|min:5|max:12',
             'name' => 'required|unique:users',
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required|min:5|max:12'
         ]);
         $pasien = new User([
             'noBPJS' => $request->noBPJS,
@@ -41,8 +41,8 @@ class LoginPasienController extends Controller
     {
         
         $credential = $request -> validate([
-            'noBPJS' => 'required',
-            'password' => 'required'
+            'noBPJS' => 'required|min:5|max:12',
+            'password' => 'required|min:5|max:12'
         ]);
         
 

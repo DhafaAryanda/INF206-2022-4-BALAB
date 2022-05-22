@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignId('dokter_id')->nullable();
             $table->foreignId('laboran_id')->nullable();
             $table->string('nama');
-            $table->string('tglPeriksa');
+            $table->date('tglPeriksa');
             $table->string('UploadPDF')->nullable();
             $table->string('comment')->nullable();
             $table->timestamps();

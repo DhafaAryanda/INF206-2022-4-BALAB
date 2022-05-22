@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('noBPJS')->nullable();
-            $table->string('NIP')->nullable();
+            $table->bigInteger('noBPJS')->nullable();
+            $table->bigInteger('NIP')->nullable();
             $table->string('name');
             $table->string('email');
             $table->string('password');
