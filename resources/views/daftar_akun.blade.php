@@ -59,7 +59,29 @@
             </div>
             <button class="btn btn-primary " style="background-color:green; margin-left: 10.2rem; font-family: 'Ubuntu', sans-serif; font-size: 17px;">Daftar</button>
         </form>
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        @if (session('Success'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Login Berhasil!',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        </script>
+        @endif
+        @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal!',
+                text: 'Nomor BPJS atau Password Salah!',
+                showConfirmButton: false,
+                timer: 2000,
+            })
+        </script>
+        @endif
     </section>
 </body>
 

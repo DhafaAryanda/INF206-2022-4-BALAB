@@ -22,7 +22,7 @@
                         <img src="{{ URL::asset('assets/images/header.png') }}" alt=" " width=" " height="100" class="d-inline-block align-text-top">
                         <a class="navbar-brand" href="#"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                 </div>
@@ -32,15 +32,15 @@
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             {{session('error')}}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                
+
             </button>
-            </div>
+        </div>
         @endif
-        <form class="form" method="post" action ="/laboran/login">
+        <form class="form" method="post" action="/laboran/login">
             @csrf
             <div class="mb-3">
                 <label name="email" for="exampleInputEmail1" class="form-label">Email address</label>
-                <input name="email" type="email" class="form-control @error('email') is-invalid @enderror"  aria-describedby="emailHelp" autofocus required>
+                <input name="email" type="email" class="form-control @error('email') is-invalid @enderror" aria-describedby="emailHelp" autofocus required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 @error('email')
                 <div class="invalid-feedback">
@@ -66,6 +66,29 @@
                 <a href="{{ URL('/login/pasien') }}" class="btn btn-dark" role="button">Masuk sebagai pasien</a>
             </div>
         </form>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        @if (session('register'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'Success',
+                title: 'Login Berhasil!',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        </script>
+        @endif
+        @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal!',
+                text: 'Username atau Password Salah!',
+                showConfirmButton: false,
+                timer: 2000,
+            })
+        </script>
+        @endif
     </section>
     <script src="{{ URL::asset('assets/bootstrap/list-Materi-Bootstrap/assets/js/bootstrap.min.js')}}"></script>
 </body>

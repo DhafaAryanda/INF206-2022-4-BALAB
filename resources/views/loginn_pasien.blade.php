@@ -23,20 +23,14 @@
                         <a class="navbar-brand" href="#"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
-                            </button>
+                        </button>
                     </div>
                 </div>
             </nav>
         </div>
 
-        <form class="form" method="post"action="/login/pasien">
+        <form class="form" method="post" action="/login/pasien">
             @csrf
-             @if(session()->has('success'))
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    {{session('success')}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
             <div class="mb-3">
                 <label for="exampleInputID1" class="form-label">Nomor BPJS</label>
                 <input type="text" class="form-control" id="exampleInputID1" name="noBPJS">
@@ -61,9 +55,32 @@
                 <a href="{{ URL('/laboran/login') }}" class="btn btn-success" role="button">Masuk sebagai laboran</a><br>
             </div> <br>
             <div class="button2">
-                <a href="{{ URL('/dokter/login') }}" class="btn btn-dark"role="button">Masuk sebagai dokter</a>
+                <a href="{{ URL('/dokter/login') }}" class="btn btn-dark" role="button">Masuk sebagai dokter</a>
             </div>
         </form>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        @if (session('Success'))
+        <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Login Berhasil!',
+                showConfirmButton: false,
+                timer: 1500,
+            })
+        </script>
+        @endif
+        @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal!',
+                text: 'Nomor BPJS atau Password Salah!',
+                showConfirmButton: false,
+                timer: 2000,
+            })
+        </script>
+        @endif
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- @dd(request()) -->
