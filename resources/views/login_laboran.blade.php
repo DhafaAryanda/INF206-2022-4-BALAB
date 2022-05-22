@@ -67,7 +67,7 @@
             </div>
         </form>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @if (session('register'))
+        @if (session('Homepasien'))
         <script>
             Swal.fire({
                 position: 'center',
