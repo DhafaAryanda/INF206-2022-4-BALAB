@@ -128,9 +128,9 @@
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                     <span class="drop-zone__prompt  col-10 ">
-                        @if($post[0]->pasien->uploadGambar !== NULL)
+                        @if($post[0]->laboran->uploadGambar !== NULL)
                         <div class="drop-zone offset-md-2 rounded-circle justify-content-center">
-                            <img src="{{asset('storage/' . $post[0]->dokter->uploadGambar)}}" alt="{{$post[0]->dokter->nama}}" width="200" height="200" class="justify-content-center rounded-circle">
+                            <img src="{{asset('storage/' . $post[0]->laboran->uploadGambar)}}" alt="{{$post[0]->laboran->nama}}" width="200" height="200" class="justify-content-center rounded-circle">
                             @endif
 
                             {{-- <i class="bi bi-arrow-down">Upload Profil</i> --}}
