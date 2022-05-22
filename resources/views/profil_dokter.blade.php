@@ -140,7 +140,7 @@
 
                         </span>
                         <input type="file" class="drop-zone__input" name="uploadGambar">
-                    </div>
+                    </div><br>
                     <!-- Profile picture upload button-->
                     <a class="btn btn-primary drop-zone_input" type="button" name="uploadGambar">Upload new image</a>
                 </div>
@@ -169,7 +169,7 @@
                     <!-- Form Group (username)-->
                     <div class="mb-3">
                         <label class="small mb-1" for="inputUsername" style="font-family: 'Ubuntu', sans-serif;">Username</label>
-                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Masukkan username" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
+                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Masukkan username" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
                         value="{{$post[0]->dokter->nama}}"
                         @else value="{{$post[0]->name}}"
                         @endif>
@@ -179,16 +179,16 @@
                         <!-- Form Group (first name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputFirstName" style="font-family: 'Ubuntu', sans-serif;">Nama Awal</label>
-                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->namaAwal}}"
+                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
+                            value="{{$post[0]->dokter->namaAwal}}"
                             @else value="{{$post[0]->namaAwal}}"
                             @endif>
                         </div>
                         <!-- Form Group (last name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputLastName" style="font-family: 'Ubuntu', sans-serif;">Nama Akhir</label>
-                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->namaAkhir}}"
+                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir" style="width: 20.6rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
+                            value="{{$post[0]->dokter->namaAkhir}}"
                             @else value="{{$post[0]->namaAkhir}}"
                             @endif>
                         </div>
@@ -198,16 +198,16 @@
                         <!-- Form Group (organization name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputOrgName" style="font-family: 'Ubuntu', sans-serif;">Rumah Sakit</label>
-                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Masukkan nama rumah sakit" style="width: 20.7rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->organisasi}}"
+                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Masukkan nama rumah sakit" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
+                            value="{{$post[0]->dokter->organisasi}}"
                             @else value="{{$post[0]->organisasi}}"
                             @endif>
                         </div>
                         <!-- Form Group (location)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputLocation" style="font-family: 'Ubuntu', sans-serif;">Lokasi</label>
-                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->lokasi}}"
+                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi" style="width: 20.6rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
+                            value="{{$post[0]->dokter->lokasi}}"
                             @else value="{{$post[0]->lokasi}}"
                             @endif>
                         </div>
@@ -216,7 +216,7 @@
                     <div class="mb-3">
                         <label class="small mb-1" for="inputEmailAddress" style="font-family: 'Ubuntu', sans-serif;">Alamat Email</label>
                         <input name="email" class="form-control" id="inputEmailAddress" type="email" placeholder="Masukkan alamat email" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                        value="{{$post[0]->email}}"
+                        value="{{$post[0]->dokter->email}}"
                         @else value="{{$post[0]->email}}"
                         @endif>
                     </div>
@@ -226,7 +226,7 @@
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputPhone">Nomor HP</label>
                             <input name="noHP" class="form-control" id="inputPhone" type="tel" placeholder="Masukkan nomor handphone" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->noHP}}"
+                            value="{{$post[0]->dokter->noHP}}"
                             @else value="{{$post[0]->noHP}}"
                             @endif>
                         </div>
@@ -234,7 +234,7 @@
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputBirthday">Tanggal Lahir</label>
                             <input name="tglLahir" class="form-control" id="inputBirthday" type="date" name="birthday" placeholder="Masukkan tanggal lahir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->dokter)
-                            value="{{$post[0]->tglLahir}}"
+                            value="{{$post[0]->dokter->tglLahir}}"
                             @else value="{{$post[0]->tglLahir}}"
                             @endif>
                         </div>

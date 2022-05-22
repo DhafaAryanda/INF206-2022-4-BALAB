@@ -27,8 +27,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 |
 */
 
-Route::get('/dokter/login', [App\Http\Controllers\Logincontroller::class, 'index1'])->middleware('guest');
-Route::post('/dokter/login', [App\Http\Controllers\Logincontroller::class, 'authenticate1']);
+Route::get('/dokter/login', [Logincontroller::class, 'index1'])->middleware('guest');
+Route::post('/dokter/login', [Logincontroller::class, 'authenticate1']);
 
 
 Route::get('/laboran/login', [Logincontroller::class, 'index2'])->middleware('guest');
@@ -77,11 +77,11 @@ Route::get('/bantuan', function () {
 //     return view('Tambah_pasien');
 // });
 
-Route::get('/profil/dokter', [App\Http\Controllers\DokterController::class, 'indexProfil'])->middleware('auth');
-Route::post('/profil/dokter', [App\Http\Controllers\DokterController::class, 'storeProfil']);
+Route::get('/profil/dokter', [DokterController::class, 'indexProfil'])->middleware('auth');
+Route::post('/profil/dokter', [DokterController::class, 'storeProfil']);
 
-Route::get('/profil/laboran', [laborancontroller::class, 'indexProfil'])->middleware('auth');
-Route::post('/profil/laboran', [laborancontroller::class, 'storeProfil']);
+Route::get('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'indexProfil'])->middleware('auth');
+Route::post('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'storeProfil']);
 
 Route::get('/Home/laboran', function () {
     return view('HomeLaboran');
