@@ -80,8 +80,8 @@ Route::get('/bantuan', function () {
 Route::get('/profil/dokter', [DokterController::class, 'indexProfil'])->middleware('auth');
 Route::post('/profil/dokter', [DokterController::class, 'storeProfil']);
 
-Route::get('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'indexProfil'])->middleware('auth');
-Route::post('/profil/laboran', [App\Http\Controllers\laborancontroller::class, 'storeProfil']);
+Route::get('/profil/laboran', [laborancontroller::class, 'indexProfil'])->middleware('auth');
+Route::post('/profil/laboran', [laborancontroller::class, 'storeProfil']);
 
 Route::get('/Home/laboran', function () {
     return view('HomeLaboran');

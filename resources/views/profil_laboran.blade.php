@@ -18,8 +18,74 @@
     <style>
         body {
             background-image: url(/assets/images/background.png);
-            background-repeat: no-repeat;
             background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        input[type=text],
+        textarea {
+            width: 95%;
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            width: 18%;
+        }
+
+        input[type="file"] {
+            width: 18%;
+            border-radius: 0%;
+        }
+
+        .drop-zone {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            cursor: pointer;
+            color: #cccccc;
+            border: 2px solid;
+        }
+
+        .drop-zone--over {
+            border-style: solid;
+        }
+
+        .drop-zone__input {
+            display: none;
+        }
+
+        .drop-zone__thumb {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            overflow: hidden;
+            background-color: #cccccc;
+            background-size: cover;
+            position: relative;
+        }
+
+        .drop-zone__thumb::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 0;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            text-align: center;
         }
     </style>
     <!-- Navbar -->
@@ -62,7 +128,7 @@
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
                     <span class="drop-zone__prompt  col-10 ">
-                        @if($post[0]->laboran->uploadGambar !== NULL)
+                        @if($post[0]->pasien->uploadGambar !== NULL)
                         <div class="drop-zone offset-md-2 rounded-circle justify-content-center">
                             <img src="{{asset('storage/' . $post[0]->dokter->uploadGambar)}}" alt="{{$post[0]->dokter->nama}}" width="200" height="200" class="justify-content-center rounded-circle">
                             @endif
@@ -72,7 +138,7 @@
 
                     </span>
                     <input type="file" class="drop-zone__input" name="uploadGambar">
-                </div>
+                </div><br>
                 <!-- Profile picture upload button-->
                 <button class="btn btn-primary" type="button" style="font-family: 'Ubuntu', sans-serif;">Upload new image</button>
             </div>
@@ -100,7 +166,7 @@
                     <!-- Form Group (username)-->
                     <div class="mb-3">
                         <label class="small mb-1" for="inputUsername" style="font-family: 'Ubuntu', sans-serif;">Username</label>
-                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Enter your username" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                        <input name="nama" class="form-control" id="inputUsername" type="text" placeholder="Enter your username" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                         value="{{$post[0]->laboran->nama}}"
                         @else value="{{$post[0]->name}}"
                         @endif >
@@ -110,7 +176,7 @@
                         <!-- Form Group (first name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputFirstName" style="font-family: 'Ubuntu', sans-serif;">Nama Awal</label>
-                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            <input name="namaAwal" class="form-control" id="inputFirstName" type="text" placeholder="Masukkan nama awal" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                             value="{{$post[0]->laboran->namaAwal}}"
                             @else value="{{$post[0]->namaAwal}}"
                             @endif>
@@ -118,7 +184,7 @@
                         <!-- Form Group (last name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputLastName" style="font-family: 'Ubuntu', sans-serif;">Nama Akhir</label>
-                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            <input name="namaAkhir" class="form-control" id="inputLastName" type="text" placeholder="Masukkan nama akhir" style="width: 20.6rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                             value="{{$post[0]->laboran->namaAkhir}}"
                             @else value="{{$post[0]->namaAkhir}}"
                             @endif>
@@ -129,7 +195,7 @@
                         <!-- Form Group (organization name)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputOrgName" style="font-family: 'Ubuntu', sans-serif;">Rumah Sakit</label>
-                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Masukkan nama rumah sakit" style="width: 20.7rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            <input name="organisasi" class="form-control" id="inputOrgName" type="text" placeholder="Masukkan nama rumah sakit" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                             value="{{$post[0]->laboran->organisasi}}"
                             @else value="{{$post[0]->organisasi}}"
                             @endif>
@@ -137,8 +203,8 @@
                         <!-- Form Group (location)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputLocation" style="font-family: 'Ubuntu', sans-serif;">Lokasi</label>
-                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi" style="width: 42.5rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
-                            value="{{$post[0]->laboran->lokasi}"
+                            <input name="lokasi" class="form-control" id="inputLocation" type="text" placeholder="Masukkan lokasi" style="width: 20.6rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            value="{{$post[0]->laboran->lokasi}}"
                             @else value="{{$post[0]->lokasi}}"
                             @endif>
                         </div>
@@ -164,7 +230,7 @@
                         <!-- Form Group (birthday)-->
                         <div class="col-md-6">
                             <label class="small mb-1" for="inputBirthday" style="font-family: 'Ubuntu', sans-serif;">Tanggal lahir</label>
-                            <input name="tglLahir" class="form-control" id="inputBirthday" type="text" placeholder="Masukkan tanggal lahir" style="font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
+                            <input name="tglLahir" class="form-control" id="inputBirthday" type="text" placeholder="Masukkan tanggal lahir" style="width: 20.6rem; font-family: 'Ubuntu', sans-serif;" @if($post[0]->laboran)
                             value="{{$post[0]->laboran->tglLahir}}"
                             @else value="{{$post[0]->tglLahir}}"
                             @endif>
