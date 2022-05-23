@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('noBPJS')->nullable();
             $table->bigInteger('NIP')->nullable();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('email');
             $table->string('password');
             $table->rememberToken();

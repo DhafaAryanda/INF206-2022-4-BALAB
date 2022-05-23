@@ -45,6 +45,8 @@
                 </div>
             </div>
         </nav>
+        {{-- @dd(isset($post->laboran_id) ) --}}
+        @if(isset($post->laboran_id))
         <section class="container-xl">
             <div class="col">
                 <div class="row ">
@@ -70,11 +72,11 @@
                                     <p></p>
                                     <br />
                                     <div class="bg-light text-center rounded-end" style="width: 10rem; font-family:serif;">
-                                        Dilan
+                                       {{ $post->pasien->nama}}
                                     </div>
                                     <br>
                                     <div class="bg-light text-center fw-bold rounded" style="width: 10rem; font-family:serif;">
-                                        2008107010026798
+                                        {{$post->user->noBPJS}}
                                     </div>
                                 </div>
                                 <div class="col">
@@ -92,11 +94,12 @@
                                     <p></p>
                                     <br />
                                     <div class="bg-light text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                                        dr. Irawan
+                                        {{$post->dokter->nama}}
                                     </div>
                                     <br>
+                                    {{-- @dd($post) --}}
                                     <div class="bg-light tex text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                                        Slamet, S.Tr.Kes.
+                                        {{$post->laboran->nama}}
                                     </div>
                                 </div>
                             </div>
@@ -108,31 +111,40 @@
                 <h4 style="text-align: center;">Hasil Laboratorium</h4>
                 <div class="col ">
                     <div class="row justify-content-center">
-                        <div class="row justify-content-center" class="container" style="height: 240px; width: 900px; background-color:rgba(255, 254, 254, 0.705);">
+                        <div class="row justify-content-center" class="container" style="height: 540px; width: 900px; background-color:rgba(255, 254, 254, 0.705);">
                             <div class="btn-wrapper"><br>
-                                <a href="#" class="btn pdf"><span class="fa fa-file-pdf-o"></span>PDF</a>
+                                
                                 <p></p>
-                                <a href="#" class="btn picture"><span class="fa fa-file-picture-o"></span>Rontgen</a>
+                                <img src="{{asset('storage/' . $post->UploadPDF)}}" width="400" height="400" class="img-responsive" />
                                 <p></p>
-                                <a href="#" class="btn folder"><span class=" fa fa-folder-o "></span>Diagnosa</a>
+                                {{-- <a href="#" class="btn folder"><span class=" fa fa-folder-o "></span>Diagnosa</a> --}}
                             </div>
                         </div>
                     </div>
                 </div>
             </div><br>
             <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
+            <form action="/input/penjelasan" method="post">
+                @csrf
             <div class="form-floating" style="margin-left: -5.8rem;">
-                <textarea class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
-                <label for="floatingTextarea" style="margin-left: 13rem">Comments</label>
+                
+                    <input type="hidden" name="record_id" value="{{$post->id}}">
+                <textarea name="comment" class="form-control position-relative" placeholder="Leave a comment here" id="floatingTextarea" style="width: 57rem; height: 15rem"></textarea>
+                <label for="floatingTextarea" style="margin-left: 13rem"></label>
             </div><br>
             <button type="submit" class="btn-success fw-bold" style="width: 9rem; margin-left: 54rem;">Kirim</button>
+        </form>
         </section><br>
     </section>
+    @else
+        tidak ada input dari laboran
+        @endif
     <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
         <b>
             <p>Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>082366286069</p>
         </b>
     </footer>
+
 </body>
 
 </html>

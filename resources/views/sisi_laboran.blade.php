@@ -65,11 +65,67 @@
 <body>
   <style>
     body {
-      background-image: url(/assets/images/background.png);
-      background-repeat: no-repeat;
-      background-size: cover;
+        background-image: url(/assets/images/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
-  </style>
+
+    input[type="file"] {
+        width: 18%;
+        border-radius: 0%;
+    }
+    button{
+      margin-top:350px;
+    }
+
+    .drop-zone {
+            /* border-radius: 50%; */
+            width: 700px;
+            height: 200px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            cursor: pointer;
+            color: #cccccc;
+            /* border: 2px solid; */
+        }
+
+        .drop-zone--over {
+            /* border-style: solid; */
+        }
+
+        .drop-zone__input {
+            display: none;
+        }
+
+        .drop-zone__thumb {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 100%; */
+            overflow: hidden;
+            background-color: #cccccc;
+            background-size: cover;
+            position: relative;
+        }
+
+        .drop-zone__thumb::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 0;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            text-align: center;
+        }
+</style>
 
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -108,7 +164,10 @@
           <div class="container rounded-3" style="height: 150px; width: 900px; background-color:rgba(225, 225, 225);">
             <div class="row fw-bold">
               <div class="col">
-                <img src="{{ URL::asset('assets/images/profil.png') }}" alt="user" height="110px" width="100" class="rounded-circle ms-5 mt-3" style="margin-left: 10px">
+                {{-- @dd($post) --}}
+                @if(isset($post->pasien->uploadGambar))
+                <img src="{{ URL::asset('storage/'. $post->pasien->uploadGambar) }}" alt="user" height="100" width="100" class="rounded-circle ms-5 mt-3" style="margin-left: 10px">
+                @endif
                 <br>
               </div>
               <div class="col">
@@ -120,25 +179,25 @@
                 </div>
                 <br>
                 <div class="bg-gradient text-start rounded fs-8" style="width:8rem; font-family:serif;">
-                  No. Pasien :
+                  No. Pasien : 
                 </div>
               </div>
               <div class="col">
                 <p></p>
                 <br />
                 <div class="bg-light text-center rounded-end" style="width: 10rem; font-family:serif;">
-                  Dilan
+                  {{$post->pasien->nama}}
                 </div>
                 <br>
                 <div class="bg-light text-center fw-bold rounded" style="width: 10rem; font-family:serif;">
-                  2008107010026798
+                  {{$post->user->noBPJS}}
                 </div>
               </div>
               <div class="col">
                 <p></p>
                 <br />
                 <div class="bg-gradient text-start rounded fs-7" style="width: 7rem; font-family:serif;">
-                  Dokter PJ :
+                  Dokter PJ : 
                 </div>
                 <br>
                 <div class="bg-gradient text-start rounded fs-7" style="width: 7rem; font-family:serif;">
@@ -149,11 +208,13 @@
                 <p></p>
                 <br />
                 <div class="bg-light text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                  dr. Irawan
+                  {{-- @dd($post) --}}
+                  {{$post->dokter->nama}}
                 </div>
                 <br>
                 <div class="bg-light tex text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                  Slamet, S.Tr.Kes.
+                  {{-- @dd(Auth::user()->name) --}}
+                  {{Auth::user()->name}}
                 </div>
               </div>
             </div>
@@ -163,34 +224,113 @@
     </div>
   </div>
   <div class="wrapper position-absolute bottom-0 start-50 top-40 translate-middle-x">
-    <form action="#">
-      <input class="file-input" type="file" name="file" hidden />
-      <i class="fas fa-cloud-upload-alt"></i>
-      <p>Browse File to Upload</p>
+    <form action="/sisi/laboran" method="post" enctype="multipart/form-data">
+      @csrf
+      <input type="hidden" name="record_id" value={{$post->id}}>
+      {{-- @dd($post->id) --}}
+      {{-- <div class="card-body text-center"> --}}
+        <!-- Profile picture image-->
+        <span class="drop-zone__prompt  mt-5 ">
+          <br><br>
+            
+            <div class="drop-zone offset  justify-content-center ">
+                {{-- <img src="{{asset('storage/' . $post[0]->dokter->uploadGambar)}}" alt="{{$post[0]->dokter->nama}}" width="200" height="200" class="justify-content-center rounded-circle"> --}}
+                {{-- @if($post->UploadPDF === NULL)
+                <i class="fas fa-cloud-upload-alt"></i>
+                
+                <p>Browse File to Upload</p>
+                @endif --}}
+        </span>
+        <input type="file" class="drop-zone__input file-input" name="UploadPDF">
+        <div class="button"><button type="submit" class="btn btn-primary ">Kirim</button></div>
+        
+    {{-- </div><br> --}}
     </form>
   </div>
   <div class="position-absolute top-100 start-50 translate-middle">
     <p></p>
-    <br><br><br><br><br><br><br><br><br>
-    <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
+    <br><br><br><br><br><br><br><br><br>><br><br><br>
+    {{-- <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
     <div class="form-floating">
+      
       <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" autofocus>
             Secara umum dari hasil lab tersebut terdapat peningkatan leukosit (sel darah putih) yang dapat terjadi baik karena infeksi, peradangan, alergi, stres, keganasan dan sebagainya. 
             Sel darah putih berperan dalam kekebalan tubuh. Oleh karena penyebab peningkatan nilai tersebut dapat terjadi karena berbagai hal, perlu dilakukan pemeriksaan yang lebih lengkap 
             agar diketahui penyebab keluhan dan dapat diberikan penanganan sesuai. Semoga membantu.</textarea>
       <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
     </div>
-  </div>
+  </div> --}}
   <script src="{{ URL::asset('assets/js/script.js')}}"></script>
   </section>
-  <br><br><br>
-  <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
+ 
+  {{-- <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
     <b>
       <p>
         Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
       </p>
     </b>
-  </footer>
+  </footer> --}}
+
+  <script>
+    document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+        const dropZoneElement = inputElement.closest(".drop-zone");
+        dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+        });
+        inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+                updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+        });
+        dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+        });
+        ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+                dropZoneElement.classList.remove("drop-zone--over");
+            });
+        });
+        dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+            if (e.dataTransfer.files.length) {
+                inputElement.files = e.dataTransfer.files;
+                updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+            dropZoneElement.classList.remove("drop-zone--over");
+        });
+    });
+    /**
+     * Updates the thumbnail on a drop zone element.
+     *
+     * @param {HTMLElement} dropZoneElement
+     * @param {File} file
+     */
+    function updateThumbnail(dropZoneElement, file) {
+        let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+        // First time - remove the prompt
+        if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+        }
+        // First time - there is no thumbnail element, so lets create it
+        if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+        }
+        thumbnailElement.dataset.label = file.name;
+        // Show thumbnail for image files
+        if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+                thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+        } else {
+            thumbnailElement.style.backgroundImage = null;
+        }
+    }
+</script>
 </body>
 
 </html>

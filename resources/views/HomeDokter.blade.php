@@ -116,16 +116,7 @@
             </div>
         </div>
 
-        <div class="text-center2">
-            <div class="widget3">
-                <div>
-                    <img class="widget-pict3" src="{{ URL('assets/images/penjelasanlogo.png')}}" alt="logo" width="80">
-                </div>
-                <br />
-                <h3>Upload Penjelasan</h3>
-                <a href="{{ URL('/input/penjelasan')}}" class="loogo">cek-></a>
-            </div>
-        </div>
+        
         
 
 
