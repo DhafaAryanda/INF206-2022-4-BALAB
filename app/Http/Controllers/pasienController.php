@@ -12,8 +12,16 @@ use Illuminate\Support\Facades\Auth;
 
 class pasienController extends Controller
 {
-    
-
+    public function indexSisi2(){
+        return view('sisi_pasien', [
+            "post"=> pasien::where('id',auth()->user()->id)->get()
+         ]);
+    }
+    public function indexSisi(dataPasien $post)
+    {
+        return view('sisi_pasien', ['post' => $post]);
+    }
+    //output hasil laboran
     public function indexProfil()
     {
         return view('profil_pasien',["post" => User::where('id',auth()->user()->id)->get()]);

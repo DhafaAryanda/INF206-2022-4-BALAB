@@ -127,10 +127,13 @@
                     <div class="card-body text-center">
                         <!-- Profile picture image-->
                         <span class="drop-zone__prompt  col-10 ">
-                            @if($post[0]->pasien->uploadGambar !== NULL)
+                            @if(isset($post[0]->pasien->uploadGambar))
                             <div class="drop-zone offset-md-2 rounded-circle justify-content-center">
                                 <img src="{{asset('storage/' . $post[0]->pasien->uploadGambar)}}" alt="{{$post[0]->pasien->nama}}" width="200" height="200" class="justify-content-center rounded-circle">
-                                @endif
+                            </div>
+                            @else
+                            <div class="drop-zone offset-md-2 rounded-circle justify-content-center">
+                            @endif
 
                                 {{-- <i class="bi bi-arrow-down">Upload Profil</i> --}}
 
