@@ -112,16 +112,7 @@
             </div>
         </div>
 
-        <div class="text-center2">
-            <div class="widget3">
-                <div>
-                    <img class="widget-pict3" src="{{ URL('assets/images/uploadlogo.png')}}" alt="logo" width="80">
-                </div>
-                <br />
-                <h3>Upload<br />Hasil</h3>
-                <a href="{{ URL('/sisi/laboran')}}" class="loogo">cek-></a>
-            </div>
-        </div>
+      
         </div>
 
 

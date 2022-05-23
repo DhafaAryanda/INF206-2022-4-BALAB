@@ -22,10 +22,13 @@ class DokterController extends Controller
             'tglPeriksa' => 'required'
         ]); 
         $user= User::where('name',$request->nama)->get();
-        
-        if (Pasien::where('nama',$request->nama)==$request->nama){
-            $validateData["pasien_id"]= $user[0]->id;
-            $validateData["user_id"]= auth()->user()->id;
+        $pasien =pasien::where('nama',$request->nama)->get();
+        // dd($pasien[0]->nama);
+        // dd($user[0]->pasien->id);
+        if ($pasien[0]->nama==$request->nama){
+            $validateData["user_id"]= $user[0]->id;
+            $validateData["pasien_id"]= $user[0]->pasien->id;
+            $validateData["dokter_id"]= auth()->user()->id;
             dataPasien::create($validateData);
             return redirect('/sisi/dokter')->with('berhasil', 'Berhasil ditambahkan!');
         }
@@ -34,7 +37,7 @@ class DokterController extends Controller
     }
     public function indexProfil()
     {
-        return view('profil_dokter',["post" => User::where('id',auth()->user()->id)->get()]);
+        return view('profil_dokter',["post" => pasien::where('id',auth()->user()->id)->get()]);
     }
     
     public function storeProfil(Request $request)

@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                </div><br></br>
+                </div><br>
                 <div class="d-flex justify-content-center">
                     <h2 style="margin-left:140px;">Daftar Pasien</h2>
                 </div>
@@ -93,6 +93,7 @@
                                 <th scope="col">Nama Pasien</th>
                                 <th scope="col">tanggal Periksa</th>
                                 <th scope="col">Opsi</th>
+                                {{-- <th scope="col">Status</th> --}}
                             </tr>
                         </thead>
                         <tbody class="table-primary text-center">
@@ -102,8 +103,11 @@
                                     <td>{{$p -> nama}}</td>
                                     <td>{{$p -> tglPeriksa}}</td>
                                     <td>
-                                        <a href=" ">Detail</a>
+                                        {{-- @dd($p->id) --}}
+                                        <a href="/input/penjelasan/{{$p->id}}">Detail</a>
                                     </td>
+                                    {{-- @
+                                    <td></td> --}}
                                 </tr>
                                 @endforeach
                         </tbody>

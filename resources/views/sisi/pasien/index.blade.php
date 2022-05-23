@@ -42,8 +42,6 @@
             </div>
         </div>
     </nav>
-    {{-- @dd($post) --}}
-    @if($post->count())
     <section class="container-xl">
         <div class="col">
             <div class="row ">
@@ -68,13 +66,11 @@
                                 <p></p>
                                 <br/>
                                 <div class="bg-light text-center rounded-end" style="width: 10rem; font-family:serif;">
-                                    {{-- @dd($post[0]->dataPasien[0]->user->noBPJS) --}}
-                                    {{$post->pasien->nama}}
+                                    Dilan
                                 </div>
                                 <br>
                                 <div class="bg-light text-center fw-bold rounded" style="width: 10rem; font-family:serif;">
-                                    {{-- {{$post[0]->dataPasien[0]->user->noBPJS}} --}}
-                                    {{$post->pasien->user->noBPJS}}
+                                    2008107010026798
                                 </div>
                             </div>
                             <div class="col">
@@ -91,15 +87,12 @@
                             <div class="col">
                                 <p></p>
                                 <br/>
-                                {{-- @dd($post[0]->dataPasien[0]->dokter->nama) --}}
                                 <div class="bg-light text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                                    {{$post->dokter->nama}}
-                                    {{-- {{$post[0]->dataPasien[0]->dokter->nama}} --}}
+                                    dr. Irawan
                                 </div>
                                 <br>
                                 <div class="bg-light tex text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
-                                    {{-- {{$post[0]->dataPasien[0]->laboran->nama}} --}}
-                                    {{$post->laboran->nama}}
+                                    Slamet, S.Tr.Kes.
                                 </div>
                             </div>
                         </div>
@@ -111,34 +104,32 @@
             <h4 style="text-align: center;">Hasil Laboratorium</h4>
             <div class="col ">
                 <div class="row justify-content-center">
-                    <div class="row justify-content-center" class="container" style="height: 640px; width: 900px; background-color:rgba(255, 254, 254, 0.705);">
+                    <div class="row justify-content-center" class="container" style="height: 240px; width: 900px; background-color:rgba(255, 254, 254, 0.705);">
                         <div class="btn-wrapper"><br>
-                            {{-- <a href="#" class="btn pdf"><span class="fa fa-file-pdf-o"></span>PDF</a> --}}
+                            <a href="#" class="btn pdf"><span class="fa fa-file-pdf-o"></span>PDF</a>
                             <p></p>
-                            <img src="{{asset('storage/' . $post->UploadPDF)}}" width="400" height="500">
-                            {{-- <p></p> --}}
-                            {{-- <a href="#" class="btn folder"><span class=" fa fa-folder-o "></span>Diagnosa</a> --}}
+                            <a href="#" class="btn picture"><span class="fa fa-file-picture-o"></span>Rontgen</a>
+                            <p></p>
+                            <a href="#" class="btn folder"><span class=" fa fa-folder-o "></span>Diagnosa</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <br/><br/><br/><br/><br/>
-        <section class="position-absolute top-98 start-50 translate-middle">
+        <selection class="position-absolute top-98 start-50 translate-middle">
             <p class="title fs-5 fw-bold text-center">Penjelasan Hasil Laboratorium</p>
             <div class="form-floating">
-                <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" autofocus>{{$post->comment}}</textarea>
-                <label for="floatingTextarea text-start mt-3"></label>
+                <textarea class="form-control position-relative ms-1" placeholder="Leave a comment here" id="floatingTextarea" style="width: 55rem; height: 10rem" readonly="readonly" 
+                autofocus> @foreach ($postpenjelasan as $post) {{ $post->penjelasan }}  @endforeach</textarea>
+                <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
             </div>
-        </section>
+        </selection>
     </section>
         <footer class="whatsapp" style="background:rgb(192, 230, 255); color:rgb(22, 58, 90); padding: 4px; text-align:right;">
             <b><p>Tanya Dokter? Hubungi<br/><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6285213345327"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50"></a>085213345327</p></b>
         </footer>
     </section>
-    @else
-        Data belum ada
-     @endif
     </body>
 
 </html>

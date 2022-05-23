@@ -107,7 +107,12 @@
                 </div>
 
                 <h3>Hasil laboratorium</h3>
-                <a href="{{ URL('/sisi/pasien')}}" class="logo">cek-></a>
+                {{-- @dd($post[0]) --}}
+                @if(isset($post[0]->id))
+                <a href="/sisi/pasien/{{$post[0]->id}}" class="logo">cek-></a>
+                @else
+                <a href="/sisi/pasien" class="logo">cek-></a>
+                @endif
             </div>
         </div>
     </section>

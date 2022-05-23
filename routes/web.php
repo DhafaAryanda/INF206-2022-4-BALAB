@@ -13,7 +13,10 @@ use App\Models\pasien;
 use App\Models\Dokter;
 use App\Models\User;
 use App\Models\Laboran;
+use App\Models\dataPasien;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 
 /*
@@ -37,26 +40,36 @@ Route::post('/laboran/login', [Logincontroller::class, 'authenticate2']);
 Route::get('/laboran', [laborancontroller::class, 'index'])->middleware('auth');
 Route::post('/laboran', [laborancontroller::class, 'store']);
 
-// Route::get('/data/pasien', function () {
-//     return view('input_data_laboran');
-// });
-
-Route::get('/input/penjelasan', function () {
-    return view('input_penjelasan');///dokter
+Route::get('/input/penjelasan/{post:id}', function (dataPasien $post) {
+    return view('input_penjelasan', [
+        "post" => $post
+    ]);
 })->middleware('auth');
+
+Route::post('/input/penjelasan', function (Request $request) {
+    $validateData['dokter_id']= Auth()->user()->id;
+    $validateData['comment']=$request->comment;
+    dataPasien::where('id',$request->record_id)
+    ->update($validateData);
+    return redirect('/sisi/dokter')->with('update', 'Data Berhasil di update');
+});
 
 Route::get('/sisi/dokter', [DokterController::class, 'index'])->middleware('auth');
 
 Route::post('/sisi/dokter', [DokterController::class, 'store']);//input data pasien
+
+// Route::resource('media', MediaController::class);
 
 
 Route::get('/tentang/kami', function () {
     return view('tentang-kami');
 })->middleware('auth');;
 
-Route::get('/sisi/pasien', function () {
-    return view('sisi_pasien');//output hasil laboran
-})->middleware('auth');
+Route::get('/sisi/pasien/{post:id}',  [pasienController::class, 'indexSisi'])->middleware('auth');
+
+Route::get('/sisi/pasien/',  [pasienController::class, 'indexSisi2'])->middleware('auth');
+   
+
 
 Route::get('/login/pasien', [App\Http\Controllers\Logincontroller::class, 'index3']);
 Route::post('/login/pasien', [App\Http\Controllers\Logincontroller::class, 'authenticate3']);
@@ -65,9 +78,10 @@ Route::get('/daftar/akun/pasien', [App\Http\Controllers\LoginPasienController::c
  Route::post('/daftar/akun/pasien', [App\Http\Controllers\LoginPasienController::class, 'store']);
 
 
-Route::get('/sisi/laboran', function () {
-    return view('sisi_laboran');//input hasil laboran
-})->middleware('auth');
+Route::get('/sisi/laboran/{post:id}', [laborancontroller::class, 'indexSisi'])->middleware('auth');
+
+Route::post('/sisi/laboran',[laborancontroller::class, 'storePDF']);
+
 
 Route::get('/bantuan', function () {
     return view('bantuan');
@@ -104,8 +118,11 @@ Route::get('/Tentang/laboran', function () {
 });
 
 Route::get('/Home/pasien', function () {
-    return view('HomePasien');
+    return view('HomePasien',[
+        "post" => dataPasien::where('user_id',Auth()->user()->id)->get()
+    ]);
 })->middleware('auth');
+
 
 Route::get('/Profil/pasien', [pasienController::class, 'indexProfil'])->middleware('auth');;
 
