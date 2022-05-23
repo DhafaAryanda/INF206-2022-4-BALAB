@@ -208,6 +208,7 @@
                 <p></p>
                 <br />
                 <div class="bg-light text-center fw-bold rounded fs-8" style="width: 12rem; font-family:serif;">
+                  {{-- @dd($post) --}}
                   {{$post->dokter->nama}}
                 </div>
                 <br>

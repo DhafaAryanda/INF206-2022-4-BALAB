@@ -24,32 +24,12 @@ class laborancontroller extends Controller
     }
 
     
-    // public function store(Request $request){
-        // $validateData = $request->validate([
-        //     'nama' => 'required|max:255',
-        //     'tglPeriksa' => 'required'
-        // ]); 
-        // $user= User::where('name',$request->nama)->get();
-
-        // // dd($request->nama);
-        // $pasien =pasien::where('nama',$request->nama)->get();
-        // // dd($pasien[0]->nama);
-        // // dd($request->nama);
-        // if ($pasien[0]->nama==$request->nama){
-        //     // return "berhasil";
-        //     $validateData["pasien_id"]= $user[0]->id;
-        //     $validateData["user_id"]= auth()->user()->id;
-        //     $validateData["laboran_id"]= auth()->user()->id;
-        //     dataPasien::create($validateData);
-        //     return redirect('/laboran')->with('berhasil', 'Berhasil ditambahkan!');
-        // }
-        //  // return "berhasil";
-        //  return redirect('/laboran')->with('gagal', 'Data tidak dapat ditammbahkan, Pasien tidak terdata');
-    // }
+   
 
     public function indexProfil()
     {
         return view('profil_laboran',["post" => User::where('id',auth()->user()->id)->get()]);
+    // "laboran" => laboran::where('user_id',auth()->user()->id)->get]);
     }
     
     public function storeProfil(Request $request)

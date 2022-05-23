@@ -37,7 +37,7 @@ class DokterController extends Controller
     }
     public function indexProfil()
     {
-        return view('profil_dokter',["post" => pasien::where('id',auth()->user()->id)->get()]);
+        return view('profil_dokter',["post" => User::where('id',auth()->user()->id)->get()]);
     }
     
     public function storeProfil(Request $request)

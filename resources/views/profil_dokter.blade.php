@@ -120,7 +120,7 @@
             </div>
         </div>
     </nav>
-    {{-- @dd($post) --}}
+    {{-- @dd($post[0]) --}}
     <hr class="mt-0 mb-4">
     <form action='/profil/dokter' method='post' enctype="multipart/form-data">
         <div class="row">
