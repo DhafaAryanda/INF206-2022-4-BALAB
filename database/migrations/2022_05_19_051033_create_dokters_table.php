@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('dokters', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('nama')->nullable();;
+            $table->string('nama')->nullable();
             $table->string('email')->nullable();
             $table->string('namaAwal')->nullable();
             $table->string('namaAkhir')->nullable();

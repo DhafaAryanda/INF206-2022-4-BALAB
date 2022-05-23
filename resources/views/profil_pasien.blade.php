@@ -110,9 +110,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/tentang/kami')}}">Tentang</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/sisi/pasien')}}">Hasil Laboratorium</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -132,10 +129,10 @@
                                 <img src="{{asset('storage/' . $post[0]->pasien->uploadGambar)}}" alt="{{$post[0]->pasien->nama}}" width="200" height="200" class="justify-content-center rounded-circle">
                             </div>
                             @else
-                            <div class="drop-zone offset-md-2 rounded-circle justify-content-center">
+                            <div class="drop-zone offset-md-2 rounded-circle justify-content-center"></div>
                             @endif
 
-                                {{-- <i class="bi bi-arrow-down">Upload Profil</i> --}}
+                            {{-- <i class="bi bi-arrow-down">Upload Profil</i> --}}
 
 
                         </span>

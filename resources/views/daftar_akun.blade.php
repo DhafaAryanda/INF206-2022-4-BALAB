@@ -43,7 +43,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputUsername1" class="form-label" style="margin-left: 20px; font-family: 'Ubuntu', sans-serif; font-size: 17px;">Username</label>
-                <input type="username" class="form-control" style="width: 355px; margin-left:20px;" value="{{ old ('name')}}" id="exampleInputUsername1" name="name">
+                <input type="username" class="form-control" style="width: 355px; margin-left:20px;" id="exampleInputUsername1" name="name">
             </div>
             <div class="mb-3">
                 <label for="exampleInputID1" class="form-label" style="margin-left: 20px; font-family: 'Ubuntu', sans-serif; font-size: 17px;">Email</label>
@@ -59,29 +59,6 @@
             </div>
             <button class="btn btn-primary " style="background-color:green; margin-left: 10.2rem; font-family: 'Ubuntu', sans-serif; font-size: 17px;">Daftar</button>
         </form>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        @if (session('Success'))
-        <script>
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Login Berhasil!',
-                showConfirmButton: false,
-                timer: 1500,
-            })
-        </script>
-        @endif
-        @if (session('error'))
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Login Gagal!',
-                text: 'Nomor BPJS atau Password Salah!',
-                showConfirmButton: false,
-                timer: 2000,
-            })
-        </script>
-        @endif
     </section>
 </body>
 

@@ -34,9 +34,6 @@
                         <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/input/penjelasan')}}">Upload Penjelasan</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/Bantuan/dokter') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
@@ -137,7 +134,7 @@
                                                 </div>
                                                 <div>
                                                     <label for="tanggal" class="form-label">Tanggal Periksa</label>
-                                                    <input type="text" class="form-control" id="tanggal" name="tglPeriksa">
+                                                    <input type="date" class="form-control" id="tanggal" name="tglPeriksa">
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>

@@ -35,9 +35,6 @@
                         <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ URL('/sisi/laboran')}}">Upload Hasil</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ URL('/Bantuan/laboran') }}">Bantuan</a>
                     </li>
                     <li class="nav-item">
@@ -108,13 +105,8 @@
                                 <td>{{$p -> nama}}</td>
                                 <td>{{$p -> tglPeriksa}}</td>
                                 <td>
-                                    <a href='/sisi/laboran/{{$p->id}}'>Detail</a>
+                                    <a href="{{ URL('/sisi/pasien')}}">Detail</a>
                                 </td>
-                                @if(isset($p->laboran_id))
-                                <td><i class="bi bi-bag-heart">Sudah diupload</i></td>
-                                @else
-                                <td>Belum diperiksa</td>
-                                @endif
                             </tr>
                             @endforeach
                         </tbody>

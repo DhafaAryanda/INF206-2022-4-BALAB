@@ -26,7 +26,7 @@ class Logincontroller extends Controller
         // return "/yeeyy";
         $credential = $request -> validate([
             'email' => 'required|email',
-            'password' => 'required|min:5|max:10'
+            'password' => 'required|'
         ]);
         // return Auth::attempt($credential);
         // return "berhasil";
@@ -44,7 +44,7 @@ class Logincontroller extends Controller
         
         $credential = $request -> validate([
             'email' => 'required|email',
-            'password' => 'required|min:5|max:10'
+            'password' => 'required'
         ]);
         // return Auth::attempt($credential);
         // return "berhasil";

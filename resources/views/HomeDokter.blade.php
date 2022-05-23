@@ -115,11 +115,6 @@
                 <a href="{{ URL('/sisi/dokter')}}" class="loogo">cek-></a>
             </div>
         </div>
-
-        
-        
-
-
     </section>
 
 </body>

@@ -65,67 +65,68 @@
 <body>
   <style>
     body {
-        background-image: url(/assets/images/background.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+      background-image: url(/assets/images/background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     input[type="file"] {
-        width: 18%;
-        border-radius: 0%;
+      width: 18%;
+      border-radius: 0%;
     }
-    button{
-      margin-top:350px;
+
+    button {
+      margin-top: 350px;
     }
 
     .drop-zone {
-            /* border-radius: 50%; */
-            width: 700px;
-            height: 200px;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: "Quicksand", sans-serif;
-            font-weight: 500;
-            font-size: 20px;
-            cursor: pointer;
-            color: #cccccc;
-            /* border: 2px solid; */
-        }
+      /* border-radius: 50%; */
+      width: 700px;
+      height: 200px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      cursor: pointer;
+      color: #cccccc;
+      /* border: 2px solid; */
+    }
 
-        .drop-zone--over {
-            /* border-style: solid; */
-        }
+    .drop-zone--over {
+      /* border-style: solid; */
+    }
 
-        .drop-zone__input {
-            display: none;
-        }
+    .drop-zone__input {
+      display: none;
+    }
 
-        .drop-zone__thumb {
-            width: 100%;
-            height: 100%;
-            /* border-radius: 100%; */
-            overflow: hidden;
-            background-color: #cccccc;
-            background-size: cover;
-            position: relative;
-        }
+    .drop-zone__thumb {
+      width: 100%;
+      height: 100%;
+      /* border-radius: 100%; */
+      overflow: hidden;
+      background-color: #cccccc;
+      background-size: cover;
+      position: relative;
+    }
 
-        .drop-zone__thumb::after {
-            content: attr(data-label);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 5px 0;
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.75);
-            font-size: 14px;
-            text-align: center;
-        }
-</style>
+    .drop-zone__thumb::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 5px 0;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.75);
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
 
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
@@ -143,9 +144,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ URL('/profil/laboran')}}">Profil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ URL('/laboran')}}">Daftar Pasien</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ URL('/Bantuan/laboran') }}">Bantuan</a>
@@ -179,7 +177,7 @@
                 </div>
                 <br>
                 <div class="bg-gradient text-start rounded fs-8" style="width:8rem; font-family:serif;">
-                  No. Pasien : 
+                  No. Pasien :
                 </div>
               </div>
               <div class="col">
@@ -197,7 +195,7 @@
                 <p></p>
                 <br />
                 <div class="bg-gradient text-start rounded fs-7" style="width: 7rem; font-family:serif;">
-                  Dokter PJ : 
+                  Dokter PJ :
                 </div>
                 <br>
                 <div class="bg-gradient text-start rounded fs-7" style="width: 7rem; font-family:serif;">
@@ -228,22 +226,22 @@
       <input type="hidden" name="record_id" value={{$post->id}}>
       {{-- @dd($post->id) --}}
       {{-- <div class="card-body text-center"> --}}
-        <!-- Profile picture image-->
-        <span class="drop-zone__prompt  mt-5 ">
-          <br><br>
-            
-            <div class="drop-zone offset  justify-content-center ">
-                {{-- <img src="{{asset('storage/' . $post[0]->dokter->uploadGambar)}}" alt="{{$post[0]->dokter->nama}}" width="200" height="200" class="justify-content-center rounded-circle"> --}}
-                {{-- @if($post->UploadPDF === NULL)
+      <!-- Profile picture image-->
+      <span class="drop-zone__prompt  mt-5 ">
+        <br><br>
+
+        <div class="drop-zone offset  justify-content-center ">
+          {{-- <img src="{{asset('storage/' . $post[0]->dokter->uploadGambar)}}" alt="{{$post[0]->dokter->nama}}" width="200" height="200" class="justify-content-center rounded-circle"> --}}
+          {{-- @if($post->UploadPDF === NULL)
                 <i class="fas fa-cloud-upload-alt"></i>
                 
                 <p>Browse File to Upload</p>
                 @endif --}}
-        </span>
-        <input type="file" class="drop-zone__input file-input" name="UploadPDF">
-        <div class="button"><button type="submit" class="btn btn-primary ">Kirim</button></div>
-        
-    {{-- </div><br> --}}
+      </span>
+      <input type="file" class="drop-zone__input file-input" name="UploadPDF">
+      <div class="button"><button type="submit" class="btn btn-primary ">Kirim</button></div>
+
+      {{-- </div><br> --}}
     </form>
   </div>
   <div class="position-absolute top-100 start-50 translate-middle">
@@ -259,77 +257,77 @@
       <label for="floatingTextarea text-start mt-3">Contoh Penjelasan</label>
     </div>
   </div> --}}
-  <script src="{{ URL::asset('assets/js/script.js')}}"></script>
-  </section>
- 
-  {{-- <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
+    <script src="{{ URL::asset('assets/js/script.js')}}"></script>
+    </section>
+
+    {{-- <footer class="whatsapp" style="background: rgb(192, 230, 255); color: rgb(22, 58, 90); padding: 4px; text-align: right">
     <b>
       <p>
         Tanya Dokter? Hubungi<br /><a href="whatsapp://send?text=Halo, saya ingin konsultasi&phone=+6282366286069"><img src="{{ URL::asset('assets/images/wa.png') }}" width="50" height="50" /></a>082366286069
-      </p>
+    </p>
     </b>
-  </footer> --}}
+    </footer> --}}
 
-  <script>
-    document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+    <script>
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
         const dropZoneElement = inputElement.closest(".drop-zone");
         dropZoneElement.addEventListener("click", (e) => {
-            inputElement.click();
+          inputElement.click();
         });
         inputElement.addEventListener("change", (e) => {
-            if (inputElement.files.length) {
-                updateThumbnail(dropZoneElement, inputElement.files[0]);
-            }
+          if (inputElement.files.length) {
+            updateThumbnail(dropZoneElement, inputElement.files[0]);
+          }
         });
         dropZoneElement.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropZoneElement.classList.add("drop-zone--over");
+          e.preventDefault();
+          dropZoneElement.classList.add("drop-zone--over");
         });
         ["dragleave", "dragend"].forEach((type) => {
-            dropZoneElement.addEventListener(type, (e) => {
-                dropZoneElement.classList.remove("drop-zone--over");
-            });
+          dropZoneElement.addEventListener(type, (e) => {
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
         });
         dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
-            if (e.dataTransfer.files.length) {
-                inputElement.files = e.dataTransfer.files;
-                updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-            }
-            dropZoneElement.classList.remove("drop-zone--over");
+          e.preventDefault();
+          if (e.dataTransfer.files.length) {
+            inputElement.files = e.dataTransfer.files;
+            updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+          }
+          dropZoneElement.classList.remove("drop-zone--over");
         });
-    });
-    /**
-     * Updates the thumbnail on a drop zone element.
-     *
-     * @param {HTMLElement} dropZoneElement
-     * @param {File} file
-     */
-    function updateThumbnail(dropZoneElement, file) {
+      });
+      /**
+       * Updates the thumbnail on a drop zone element.
+       *
+       * @param {HTMLElement} dropZoneElement
+       * @param {File} file
+       */
+      function updateThumbnail(dropZoneElement, file) {
         let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
         // First time - remove the prompt
         if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          dropZoneElement.querySelector(".drop-zone__prompt").remove();
         }
         // First time - there is no thumbnail element, so lets create it
         if (!thumbnailElement) {
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            dropZoneElement.appendChild(thumbnailElement);
+          thumbnailElement = document.createElement("div");
+          thumbnailElement.classList.add("drop-zone__thumb");
+          dropZoneElement.appendChild(thumbnailElement);
         }
         thumbnailElement.dataset.label = file.name;
         // Show thumbnail for image files
         if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-                thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-            };
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => {
+            thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+          };
         } else {
-            thumbnailElement.style.backgroundImage = null;
+          thumbnailElement.style.backgroundImage = null;
         }
-    }
-</script>
+      }
+    </script>
 </body>
 
 </html>

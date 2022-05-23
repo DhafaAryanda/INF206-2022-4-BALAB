@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Pasien;
+use App\Models\pasien;
 use App\Models\User;
 use App\Models\Laboran;
 use App\Models\Dokter;

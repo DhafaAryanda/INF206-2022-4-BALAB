@@ -33,9 +33,6 @@
                             <a class="nav-link" href="{{ URL('/profil/dokter')}}">Profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ URL('/sisi/dokter') }}">Daftar Pasien</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ URL('/bantuan')}}">Bantuan</a>
                         </li>
                         <li class="nav-item">
